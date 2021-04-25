@@ -14,34 +14,16 @@ clock_t start, end;
 
 int main()
 {
-    FILE *inputFile;
-    inputFile = fopen("wordlist.txt", "r");
-    if(inputFile == NULL)
-    {
-        printf("This Document cannot be opened!\n");
-    }
-    else
-    {
-        char character;
-        while((character = fgetc(inputFile)) != EOF)
-        {
-            printf("%c", character);
-        }
-    }
-
-    /*start gets the current CPU time*/
-    start = clock();
 
     EnterPlayerName();
+    /*start gets the current CPU time*/
+    start = clock();
     PlayerGuess();
-
-
-
-
 
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
     ExitAttempt();
+    printf("%s",searchword);
     return 0;
 }
 
@@ -56,29 +38,41 @@ void EnterPlayerName()
 /*This function will let the player guess the letters of the searchword*/
 void PlayerGuess()
 {
+    bool exists = false;
     char userGuess;
     printf("Guess the letters of the searched word: ");
     scanf("%c",&userGuess); //Zeile Fehlerhaft!!!
+    userGuess = getchar();
     printf("\n");
     for(int i = 0; i < strlen(searchword); i++)
     {
-
-        if (searchword[i] == "-")
-        {
-            printf("The letter already has been guessed.\n");
-        }
         if (searchword[i] == userGuess)
         {
-            rightattempt+=1;
-            searchword[i] = "-";
-            printf("Your guess is right.\n");
+            exists = true;
+            ReplaceChar(i);
         }
-        else
+        if(exists == false)
         {
-            wrongattempt+=1;
-            printf("Your guess is wrong.\n");
+            if (searchword[i] == "-")
+            {
+                exists= false;
+            }
         }
     }
+    if (exists == true)
+    {
+        printf("Your guess is right.\n");
+        rightattempt+=1;
+    }
+    else
+    {
+        wrongattempt+=1;
+        printf("Your guess is wrong.\n");
+    }
+}
+void ReplaceChar(int j)
+{
+    searchword[j] = 124;
 }
 
 /*This function measures the game time in seconds*/
