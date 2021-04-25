@@ -5,6 +5,7 @@
 #include <sys/time.h>
 char playername[20];
 char searchword[5] = "Nokia";
+int wrongattempt = 0, rightattempt = 0;
 
 /*Time measurement variables*/
 long i;
@@ -17,7 +18,7 @@ int main()
     start = clock();
 
     EnterPlayerName();
-    /*PlayerGuess();*/
+    PlayerGuess();
 
 
 
@@ -25,7 +26,7 @@ int main()
 
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
-
+    ExitAttempt();
     return 0;
 }
 
@@ -43,23 +44,24 @@ void PlayerGuess()
     char userGuess;
     printf("Guess the letters of the searched word: ");
     scanf("%c",&userGuess); //Zeile Fehlerhaft!!!
-
+    printf("\n");
     for(int i = 0; i < strlen(searchword); i++)
     {
 
         if (searchword[i] == "-")
         {
-            printf("The letter already has been guessed.");
+            printf("The letter already has been guessed.\n");
         }
         if (searchword[i] == userGuess)
         {
-
+            rightattempt+=1;
             searchword[i] = "-";
-            printf("Your guess is right.");
+            printf("Your guess is right.\n");
         }
         else
         {
-            printf("Your guess is wrong.");
+            wrongattempt+=1;
+            printf("Your guess is wrong.\n");
         }
     }
 }
@@ -77,4 +79,8 @@ void TimeMeasurement()
     totalTime = (float)(end-start) / (float)CLOCKS_PER_SEC;
 
     printf("The Game was running %.2f seconds\n",totalTime);
+}
+void ExitAttempt()
+{
+    printf("You had %i right and %i wrong attempts\n",rightattempt,wrongattempt);
 }
