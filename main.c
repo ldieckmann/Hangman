@@ -14,6 +14,7 @@ clock_t start, end;
 
 int main()
 {
+    GameIntroduction();
     words();
     printf("\n");
     EnterPlayerName();
@@ -26,6 +27,14 @@ int main()
     ExitAttempt();
     printf("%s",searchword);
     return 0;
+}
+
+/*This function will*/
+void GameIntroduction() {
+    printf("---------------------------------------------------------\n");
+    printf("|**************** Welcome to Hangman *******************|\n");
+    printf("|Authors: David Nguyen, Louis Dieckmann, Sedad Deeg\t|\n");
+    printf("---------------------------------------------------------\n\n");
 }
 
 /*This function will let the user enter his playername*/
