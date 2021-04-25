@@ -12,3 +12,10 @@
 	<stdbool.h>
 	<sys/time.h>
 
+1619363049 source:c:\git\hangman\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<sys/time.h>
+
