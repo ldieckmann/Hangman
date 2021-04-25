@@ -14,7 +14,7 @@ clock_t start, end;
 
 int main()
 {
-        FILE *inputFile;
+    FILE *inputFile;
     inputFile = fopen("wordlist.txt", "r");
     if(inputFile == NULL)
     {
@@ -127,6 +127,6 @@ void GameCountdown()
         while(currTime<endTime);
         // eine Sekunde ist um
         countdownSec--;
-        }
+    }
 }
 
