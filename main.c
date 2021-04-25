@@ -14,7 +14,8 @@ clock_t start, end;
 
 int main()
 {
-
+    words();
+    printf("\n");
     EnterPlayerName();
     /*start gets the current CPU time*/
     start = clock();
@@ -140,3 +141,21 @@ void player()
     }
 }
 **/
+
+void words()
+{
+    FILE *inputFile;
+    inputFile = fopen("wordlist.txt", "r");
+    if(inputFile == NULL)
+    {
+        printf("This document cannot be opened!");
+    }
+        else
+    {
+        char character;
+        while((character = fgetc(inputFile)) != EOF)
+        {
+            printf("%c", character);
+        }
+    }
+}
