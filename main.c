@@ -23,7 +23,7 @@ int main()
     else
     {
         char character;
-        while(character = fgetc(inputFile)) != EOF)
+        while((character = fgetc(inputFile)) != EOF)
         {
             printf("%c", character);
         }
