@@ -130,3 +130,19 @@ void GameCountdown()
     }
 }
 
+/**
+void player()
+{
+    FILE *playernames;
+    char playername[20];
+
+    printf("Enter your playername: ");
+    scanf("%c", &playername);
+
+    playernames("playername.txt", "w+")
+    if(inputFile == NULL)
+    {
+        printf("This Document cannot be opened!\n");
+    }
+}
+**/
