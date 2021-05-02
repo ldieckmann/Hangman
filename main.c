@@ -32,7 +32,8 @@ int main()
     return 0;
 }
 /*This function will print the game introductions*/
-void GameIntroduction() {
+void GameIntroduction()
+{
     printf("---------------------------------------------------------\n");
     printf("|**************** Welcome to Hangman *******************|\n");
     printf("|Authors: David Nguyen, Louis Dieckmann, Sedad Deeg\t|\n");
@@ -50,47 +51,56 @@ void EnterPlayerName()
 /*This function will let the player guess the letters of the searchword*/
 void PlayerGuess()
 {
+    int CompareCharacters = 0;
     bool exists = false;
     char userGuess;
-    printf("Guess the letters of the searched word: ");
-    scanf("%c",&userGuess); //Zeile Fehlerhaft!!!
-    userGuess = getchar();
-    printf("\n");
-    for(int i = 0; i < strlen(searchword); i++)
+
+    do
     {
-        if (searchword[i] == userGuess)
+        exists = false;
+        printf("Guess the letters of the searched word: ");
+        scanf("%c",&userGuess);
+        userGuess = getchar();
+        printf("\n");
+        for(int i = 0; i < strlen(searchword); i++)
         {
-            exists = true;
-            ReplaceChar(i);
-        }
-        if(exists == false)
-        {
-            if (searchword[i] == "-")
+            if (searchword[i] == userGuess)
             {
-                exists= false;
+                exists = true;
+                CompareCharacters = CompareCharacters + 1;
+                ReplaceChar(i);
+            }
+            if(exists == false)
+            {
+                if (searchword[i] == "-")
+                {
+                    exists= false;
+                }
             }
         }
-    }
-    if (exists == true)
-    {
-        printf("Your guess is right.\n");
-        rightattempt+=1;
-    }
-    else
-    {
-        wrongattempt+=1;
-        printf("Your guess is wrong.\n");
-    }
+        if (exists == true)
+        {
+            printf("Your guess is right.\n");
+            rightattempt+=1;
+        }
+        else
+        {
+            wrongattempt+=1;
+            printf("Your guess is wrong.\n");
+        }
+    } while(CompareCharacters != strlen(searchword));
 }
 void ReplaceChar(int j)
 {
     searchword[j] = 42;
 }
 /*This function prints the searchword, but with hidden letters.*/
-void PrintSearchWordHidden() {
+void PrintSearchWordHidden()
+{
     char searchwordHidden[strlen(searchword)];
     printf("Try to guess the hidden word: ");
-    for(i=0; i<strlen(searchword); i++) {
+    for(i=0; i<strlen(searchword); i++)
+    {
         searchwordHidden[i] = 95;
         printf("%s ",&searchwordHidden[i]);
     }
@@ -154,7 +164,7 @@ void EnterPlayerNameIntoTextFile()
     playernames = fopen("playername.txt", "a");
     if(playernames == NULL)
     {
-        printf("This Document cannot be opened!\n");
+        printf("Error: This Document cannot be opened!\n");
     }
     else
     {
@@ -177,14 +187,35 @@ void ImportWordsFromWordlistFile()
     {
         printf("Error: This document cannot be opened!");
     }
-        else
+    else
     {
         char character;
         while((character = fgetc(inputFile)) != EOF)
         {
             searchword[counter] = character;
-            //printf("%c", character); //print of the unhidden word.
+            //printf("%c", character); //prints the unhidden word.
             counter++;
         }
     }
 }
+/*This function will suggest player names from the textfile (playername.txt)*/
+/*
+void SuggestPlayerName()
+{
+FILE *suggestFile;
+suggestFile = fopen("playername.txt", "r");
+
+if(suggestFile == NULL)
+    {
+        printf("Error: This document cannot be opened!");
+    }
+        else
+    {
+        while((character = fgetc(inputFile)) != EOF)
+        {
+
+        }
+
+    }
+}
+*/
