@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <sys/time.h>
 char playername[20];
-char searchword[5] = "Nokia";
+char searchword[25]; //The word which is searched for (imported from textfile)
+chear guessedWord[25];
 int wrongattempt = 0, rightattempt = 0;
 
 /*Time measurement variables*/
@@ -15,8 +16,9 @@ clock_t start, end;
 int main()
 {
     GameIntroduction();
-    words();
+    ImportWordsFromWordlistFile();
     printf("\n");
+    PrintSearchWordHidden();
     EnterPlayerName();
     /*start gets the current CPU time*/
     start = clock();
@@ -25,11 +27,10 @@ int main()
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
     ExitAttempt();
-    printf("%s",searchword);
+    //printf("%s",searchword);
     return 0;
 }
-
-/*This function will*/
+/*This function will print the game introductions*/
 void GameIntroduction() {
     printf("---------------------------------------------------------\n");
     printf("|**************** Welcome to Hangman *******************|\n");
@@ -40,7 +41,7 @@ void GameIntroduction() {
 /*This function will let the user enter his playername*/
 void EnterPlayerName()
 {
-    printf("Enter Player Name: ");
+    printf("Enter your Player Name: ");
     scanf("%s",playername);
     printf("Your Player Name is: %s\n\n", &playername);
 }
@@ -73,6 +74,8 @@ void PlayerGuess()
     {
         printf("Your guess is right.\n");
         rightattempt+=1;
+
+        guessedWord[i]
     }
     else
     {
@@ -82,7 +85,17 @@ void PlayerGuess()
 }
 void ReplaceChar(int j)
 {
-    searchword[j] = 124;
+    searchword[j] = 42;
+}
+/*This function prints the searchword, but with hidden letters.*/
+void PrintSearchWordHidden() {
+    char searchwordHidden[strlen(searchword)];
+    printf("Try to guess the hidden word: ");
+    for(i=0; i<strlen(searchword); i++) {
+        searchwordHidden[i] = 95;
+        printf("%s ",&searchwordHidden[i]);
+    }
+    printf("\n\n");
 }
 
 /*This function measures the game time in seconds*/
@@ -151,20 +164,24 @@ void player()
 }
 **/
 
-void words()
+/*This function does read the word from the textfile (wordlist.txt)*/
+void ImportWordsFromWordlistFile()
 {
+    int counter = 0;
     FILE *inputFile;
     inputFile = fopen("wordlist.txt", "r");
     if(inputFile == NULL)
     {
-        printf("This document cannot be opened!");
+        printf("Error: This document cannot be opened!");
     }
         else
     {
         char character;
         while((character = fgetc(inputFile)) != EOF)
         {
-            printf("%c", character);
+            searchword[counter] = character;
+            //printf("%c", character); //print of the unhidden word.
+            counter++;
         }
     }
 }
