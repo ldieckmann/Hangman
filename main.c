@@ -6,6 +6,7 @@
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
 char guessedWord[25];
+//char ArrayOfGuessedLetters[100];
 int wrongattempt = 0, rightattempt = 0;
 
 /*Time measurement variables*/
@@ -24,7 +25,6 @@ int main()
     /*start gets the current CPU time*/
     start = clock();
     PlayerGuess();
-
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
     ExitAttempt();
@@ -53,6 +53,7 @@ void PlayerGuess()
 {
     int CompareCharacters = 0;
     bool exists = false;
+    bool checkForExistingLetter = false;
     char userGuess;
 
     do
@@ -60,7 +61,7 @@ void PlayerGuess()
         exists = false;
         printf("Guess the letters of the searched word: ");
         scanf("%c",&userGuess);
-        userGuess = getchar();
+        userGuess = tolower(getchar());
         printf("\n");
         for(int i = 0; i < strlen(searchword); i++)
         {
@@ -78,6 +79,7 @@ void PlayerGuess()
                 }
             }
         }
+
         if (exists == true)
         {
             printf("Your guess is right.\n");
@@ -85,11 +87,12 @@ void PlayerGuess()
         }
         else
         {
-            wrongattempt+=1;
             printf("Your guess is wrong.\n");
+            wrongattempt+=1;
         }
     } while(CompareCharacters != strlen(searchword));
 }
+/*This function does replace the char*/
 void ReplaceChar(int j)
 {
     searchword[j] = 42;
@@ -192,8 +195,7 @@ void ImportWordsFromWordlistFile()
         char character;
         while((character = fgetc(inputFile)) != EOF)
         {
-            searchword[counter] = character;
-            //printf("%c", character); //prints the unhidden word.
+            searchword[counter] = tolower(character);
             counter++;
         }
     }
