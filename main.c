@@ -5,7 +5,7 @@
 #include <sys/time.h>
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
-chear guessedWord[25];
+char guessedWord[25];
 int wrongattempt = 0, rightattempt = 0;
 
 /*Time measurement variables*/
@@ -19,7 +19,8 @@ int main()
     ImportWordsFromWordlistFile();
     printf("\n");
     PrintSearchWordHidden();
-    EnterPlayerName();
+    EnterPlayerNameIntoTextFile();
+    //EnterPlayerName();
     /*start gets the current CPU time*/
     start = clock();
     PlayerGuess();
@@ -74,8 +75,6 @@ void PlayerGuess()
     {
         printf("Your guess is right.\n");
         rightattempt+=1;
-
-        guessedWord[i]
     }
     else
     {
@@ -146,24 +145,28 @@ void GameCountdown()
         countdownSec--;
     }
 }
-
-/**
-void player()
+/*This function saves the player name into the playername.txt textfile*/
+void EnterPlayerNameIntoTextFile()
 {
     FILE *playernames;
-    char playername[20];
+    char name[20];
 
-    printf("Enter your playername: ");
-    scanf("%c", &playername);
-
-    playernames("playername.txt", "w+")
-    if(inputFile == NULL)
+    playernames = fopen("playername.txt", "a");
+    if(playernames == NULL)
     {
         printf("This Document cannot be opened!\n");
     }
-}
-**/
+    else
+    {
+        printf("Enter your Player Name: ");
+        scanf("%s", &name);
+        fprintf(playernames, name);
+        fprintf(playernames, "\n");
 
+        printf("Your Player Name is: %s\n\n", &name);
+    }
+    fclose(playernames);
+}
 /*This function does read the word from the textfile (wordlist.txt)*/
 void ImportWordsFromWordlistFile()
 {
