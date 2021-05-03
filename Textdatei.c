@@ -1,4 +1,4 @@
-#include "TextFileManagement.h"
+#include "Textdatei.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

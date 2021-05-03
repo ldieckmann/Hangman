@@ -3,8 +3,8 @@
 #include <string.h>
 #include <stdbool.h>
 #include <sys/time.h>
-#include "TextFileManagement.h"
-#include "visualize.h"
+#include "Textdatei.h"
+#include "visualase.h"
 int playmode; //playmode 0 = casual; playmode 1 = against the time;
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)

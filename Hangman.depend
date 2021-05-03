@@ -21,14 +21,23 @@
 	<stdbool.h>
 	<sys/time.h>
 
+<<<<<<< HEAD
 1620057260 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+=======
+1620056431 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+>>>>>>> parent of d5dc7f7 (Renamed Files)
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<sys/time.h>
+<<<<<<< HEAD
 	"TextFileManagement.h"
 	"visualize.h"
+=======
+	"Textdatei.h"
+	"visualase.h"
+>>>>>>> parent of d5dc7f7 (Renamed Files)
 
 1620056244 source:c:\users\fekef\desktop\git\hangman\textdatei.c
 	"Textdatei.h"
@@ -56,6 +65,7 @@
 
 1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
 
+<<<<<<< HEAD
 1620057270 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.c
 	"visualize.h"
 
@@ -69,3 +79,5 @@
 
 1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.h
 
+=======
+>>>>>>> parent of d5dc7f7 (Renamed Files)
