@@ -20,23 +20,22 @@ int main()
 {
     HangmanTitle();
     GameIntroduction();
+    //GameIntroduction();
 
     //suche spiel aus
     //starte spiel
 
     //CheckPlayMode();
-
-    ImportWordsFromWordlistFile();
-    printf("\n");
-    PrintSearchWordHidden();
-    EnterPlayerNameIntoTextFile();
+    //ImportWordsFromWordlistFile();
+    //EnterPlayerNameIntoTextFile();
     /*start gets the current CPU time*/
-    start = clock();
-    PlayerGuess();
+    //start = clock();
+    //PlayerGuess();
     /*Call of the function which measures the total game time*/
-    TimeMeasurement();
-    ExitAttempt();
+    //TimeMeasurement();
+    //ExitAttempt();
     //printf("%s",searchword);
+    HangmanVisualize();
     return 0;
 }
 /*This function will print the game introductions*/
@@ -97,8 +96,8 @@ void PlayerGuess()
         exists = false;
         printf("Guess the letters of the searched word: ");
         scanf(" %c",&userGuess);
-        userGuess = tolower(getchar());
-        printf("\n");
+        userGuess = tolower(userGuess);
+        //printf("\n");
         for(int i = 0; i < strlen(searchword); i++)
         {
             if (searchword[i] == userGuess)
@@ -365,7 +364,3 @@ void HangmanTitle()
     printf(" |_| |_|  \__,_| |_| |_|  \__, | |_| |_| |_|  \__,_| |_| |_| \n");
     printf("                          |___/ \n");
 }
-
-
-
-
