@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdbool.h>
 #include <sys/time.h>
+//#include <Textdatei.h>
+//#include <visualase.h>
 int playmode; //playmode 0 = casual; playmode 1 = against the time;
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
@@ -239,27 +241,7 @@ void EnterPlayerNameIntoTextFile()
     fclose(playernames);
 }
 /*This function does read the word from the textfile (wordlist.txt)*/
-void ImportWordsFromWordlistFile()
-{
-    //char adfjhnfdj[25];
-    int counter = 0;
-    FILE *inputFile;
-    inputFile = fopen("wordlist.txt", "r");
-    if(inputFile == NULL)
-    {
-        printf("Error: This document cannot be opened!");
-    }
-    else
-    {
-        char character;
-        while((character = fgetc(inputFile)) != EOF)
-        {
-            searchword[counter] = tolower(character);
-            counter++;
-        }
-        printf(searchword);
-    }
-}
+
 /*This function will suggest player names from the textfile (playername.txt)*/
 /*
 void SuggestPlayerName()
@@ -281,86 +263,4 @@ if(suggestFile == NULL)
     }
 }
 */
-void HangmanVisualize()
-{
-    if (wrongattempt == 0)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-    if (wrongattempt == 1)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-    if (wrongattempt == 2)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|   |  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-    if (wrongattempt == 3)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-    if (wrongattempt == 4)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|\ \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-    if (wrongattempt == 5)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|\ \n");
-        printf("|  /   \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-    if (wrongattempt == 6)
-    {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|\ \n");
-        printf("|  / \ \n");
-        printf("|      \n");
-        printf("=======\n");
-    }
-}
 
-void HangmanTitle()
-{
-    printf("  _   _ \n");
-    printf(" | | | |   __ _   _ __     __ _   _ __ ___     __ _   _ __ \n");
-    printf(" | |_| |  / _` | | '_ \   / _` | | '_ ` _ \   / _` | | '_ \  \n");
-    printf(" |  _  | | (_| | | | | | | (_| | | | | | | | | (_| | | | | | \n");
-    printf(" |_| |_|  \__,_| |_| |_|  \__, | |_| |_| |_|  \__,_| |_| |_| \n");
-    printf("                          |___/ \n");
-}

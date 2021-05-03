@@ -5,7 +5,7 @@
 	<string.h>
 	<stdbool.h>
 
-1620054881 source:c:\users\fekef\desktop\git\hangman\main.c
+1620055854 source:c:\users\fekef\desktop\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -27,4 +27,6 @@
 	<sys/time.h>
 
 1620054870 source:c:\users\fekef\desktop\git\hangman\textdatei.c
+
+1620055673 source:c:\users\fekef\desktop\git\hangman\visualase.c
 
