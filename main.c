@@ -71,11 +71,13 @@ void CheckPlayMode()
     }
 }
 /*This function will execute the casual playmode*/
-void playmodeCasual() {
+void playmodeCasual()
+{
     PlayerGuess();
 }
 /*This function will execute the against the time playmode*/
-void PlayModeAgainstTheTime() {
+void PlayModeAgainstTheTime()
+{
 
 }
 /*This function will let the player guess the letters of the searchword*/
@@ -119,6 +121,7 @@ void PlayerGuess()
         {
             printf("Your guess is wrong.\n");
             wrongattempt+=1;
+            HangmanVisualize();
         }
     }
     while(CompareCharacters != strlen(searchword));
@@ -275,3 +278,76 @@ if(suggestFile == NULL)
     }
 }
 */
+void HangmanVisualize()
+{
+    if (wrongattempt == 0)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 1)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 2)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 3)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 4)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\  |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 5)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\  |\n");
+        printf(" /    |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 6)
+    {
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf(" /|\  |\n");
+        printf(" / \  |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+}

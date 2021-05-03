@@ -19,3 +19,10 @@
 	<stdbool.h>
 	<sys/time.h>
 
+1620053117 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<sys/time.h>
+
