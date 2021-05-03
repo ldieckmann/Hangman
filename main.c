@@ -328,7 +328,7 @@ void HangmanVisualize()
         printf("+---+\n");
         printf("|   |  \n");
         printf("|   O  \n");
-        printf("|  /|\ \n");
+        printf("|  /|\\ \n");
         printf("|      \n");
         printf("|      \n");
         printf("=======\n");
@@ -338,7 +338,7 @@ void HangmanVisualize()
         printf("+---+\n");
         printf("|   |  \n");
         printf("|   O  \n");
-        printf("|  /|\ \n");
+        printf("|  /|\\ \n");
         printf("|  /   \n");
         printf("|      \n");
         printf("=======\n");
@@ -348,8 +348,8 @@ void HangmanVisualize()
         printf("+---+\n");
         printf("|   |  \n");
         printf("|   O  \n");
-        printf("|  /|\ \n");
-        printf("|  / \ \n");
+        printf("|  /|\\ \n");
+        printf("|  / \\ \n");
         printf("|      \n");
         printf("=======\n");
     }
@@ -359,7 +359,7 @@ void HangmanTitle()
 {
     printf("  _   _ \n");
     printf(" | | | |   __ _   _ __     __ _   _ __ ___     __ _   _ __ \n");
-    printf(" | |_| |  / _` | | '_ \\   / _` | | '_ ` _ \\   / _` | | '_ \\ \n");
+    printf(" | |_| |  / _` | | '_ \\   / _` | | '_ ` _ \\   / _` | | '_ \\  \n");
     printf(" |  _  | | (_| | | | | | | (_| | | | | | | | | (_| | | | | | \n");
     printf(" |_| |_|  \\__,_| |_| |_|  \\__, | |_| |_| |_|  \\__,_| |_| |_| \n");
     printf("                          |___/ \n");
