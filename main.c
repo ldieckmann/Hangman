@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <sys/time.h>
+int playmode; //playmode 0 = casual; playmode 1 = against the time;
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
 char guessedWord[25];
@@ -17,14 +18,14 @@ clock_t start, end;
 int main()
 {
     GameIntroduction();
+    CheckPlayMode();
     ImportWordsFromWordlistFile();
     printf("\n");
     PrintSearchWordHidden();
     EnterPlayerNameIntoTextFile();
-    //EnterPlayerName();
     /*start gets the current CPU time*/
     start = clock();
-    PlayerGuess();
+    //PlayerGuess();
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
     ExitAttempt();
@@ -39,15 +40,41 @@ void GameIntroduction()
     printf("|Authors: David Nguyen, Louis Dieckmann, Sedad Deeg\t|\n");
     printf("---------------------------------------------------------\n\n");
 }
-
-/*This function will let the user enter his playername*/
-void EnterPlayerName()
+/*This function asks the player if he wants to play against the time*/
+void CheckPlayMode()
 {
-    printf("Enter your Player Name: ");
-    scanf("%s",playername);
-    printf("Your Player Name is: %s\n\n", &playername);
-}
+    char yesOrNo;
+    printf("Do you want to play against the time? (y/n): ");
+    scanf(" %c", tolower(yesOrNo));
 
+    if (yesOrNo == 'n')
+    {
+        playmode = 0; //playmode 0 = casual
+        playmodeCasual();
+    }
+    if (yesOrNo == 'y')
+    {
+        playmode = 1; //playmode 1 = against the time
+        PlayModeAgainstTheTime();
+    }
+    if((yesOrNo != 'y') | (yesOrNo != 'n'))
+    {
+        do
+        {
+            printf("Error: Your input is invalid.\n");
+            printf("Please type y/n.\n");
+        }
+        while((yesOrNo != 'y') | (yesOrNo != 'n')); //Repeats an Error message until the player selects the valid playmode
+    }
+}
+/*This function will execute the casual playmode*/
+void playmodeCasual() {
+    PlayerGuess();
+}
+/*This function will execute the against the time playmode*/
+void PlayModeAgainstTheTime() {
+
+}
 /*This function will let the player guess the letters of the searchword*/
 void PlayerGuess()
 {
@@ -90,7 +117,8 @@ void PlayerGuess()
             printf("Your guess is wrong.\n");
             wrongattempt+=1;
         }
-    } while(CompareCharacters != strlen(searchword));
+    }
+    while(CompareCharacters != strlen(searchword));
 }
 /*This function does replace the char*/
 void ReplaceChar(int j)
@@ -183,6 +211,7 @@ void EnterPlayerNameIntoTextFile()
 /*This function does read the word from the textfile (wordlist.txt)*/
 void ImportWordsFromWordlistFile()
 {
+    char adfjhnfdj[25];
     int counter = 0;
     FILE *inputFile;
     inputFile = fopen("wordlist.txt", "r");
@@ -198,6 +227,7 @@ void ImportWordsFromWordlistFile()
             searchword[counter] = tolower(character);
             counter++;
         }
+        printf(searchword);
     }
 }
 /*This function will suggest player names from the textfile (playername.txt)*/
