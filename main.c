@@ -7,7 +7,7 @@ int playmode; //playmode 0 = casual; playmode 1 = against the time;
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
 char guessedWord[25];
-char triedChars[29];
+char triedChars[30];
 //char ArrayOfGuessedLetters[100];
 int wrongattempt = 0, rightattempt = 0;
 
@@ -198,7 +198,7 @@ void ExitTriedChars(char triedChar)
     int i, j;
     char tmp;
 
-    triedChars.insert(triedChar);
+    triedChars[30] = triedChar;
 
     for (i = 1; i < strlen(triedChars); i++)
     {
@@ -238,7 +238,7 @@ void EnterPlayerNameIntoTextFile()
 /*This function does read the word from the textfile (wordlist.txt)*/
 void ImportWordsFromWordlistFile()
 {
-    char adfjhnfdj[25];
+    //char adfjhnfdj[25];
     int counter = 0;
     FILE *inputFile;
     inputFile = fopen("wordlist.txt", "r");
