@@ -318,8 +318,8 @@ void HangmanVisualize()
         printf("  +---+\n");
         printf("  |   |\n");
         printf("  O   |\n");
-        printf("  |   |\n");
         printf(" /|   |\n");
+        printf("      |\n");
         printf("      |\n");
         printf("=========\n");
     }
@@ -328,8 +328,8 @@ void HangmanVisualize()
         printf("  +---+\n");
         printf("  |   |\n");
         printf("  O   |\n");
-        printf("  |   |\n");
         printf(" /|\  |\n");
+        printf("      |\n");
         printf("      |\n");
         printf("=========\n");
     }
@@ -338,9 +338,19 @@ void HangmanVisualize()
         printf("  +---+\n");
         printf("  |   |\n");
         printf("  O   |\n");
+        printf(" /|\  |\n");
+        printf(" /    |\n");
+        printf("      |\n");
+        printf("=========\n");
+    }
+    if (wrongattempt == 6)
+    {
+        printf("  +---+\n");
         printf("  |   |\n");
+        printf("  O   |\n");
         printf(" /|\  |\n");
         printf(" / \  |\n");
+        printf("      |\n");
         printf("=========\n");
     }
 }
