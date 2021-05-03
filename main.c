@@ -74,11 +74,13 @@ void CheckPlayMode()
     }
 }
 /*This function will execute the casual playmode*/
-void playmodeCasual() {
+void playmodeCasual()
+{
     PlayerGuess();
 }
 /*This function will execute the against the time playmode*/
-void PlayModeAgainstTheTime() {
+void PlayModeAgainstTheTime()
+{
 
 }
 /*This function will let the player guess the letters of the searchword*/
@@ -278,3 +280,66 @@ if(suggestFile == NULL)
     }
 }
 */
+void HangmanVisualize()
+{
+    if (wrongattempt == 0)
+    {
+        printf("  +---+");
+        printf("  |   |");
+        printf("      |");
+        printf("      |");
+        printf("      |");
+        printf("      |");
+        printf("=========");
+    }
+    if (wrongattempt == 1)
+    {
+        printf("  +---+");
+        printf("  |   |");
+        printf("  O   |");
+        printf("      |");
+        printf("      |");
+        printf("      |");
+        printf("=========");
+    }
+    if (wrongattempt == 2)
+    {
+        printf("  +---+");
+        printf("  |   |");
+        printf("  O   |");
+        printf("  |   |");
+        printf("      |");
+        printf("      |");
+        printf("=========");
+    }
+    if (wrongattempt == 3)
+    {
+        printf("  +---+");
+        printf("  |   |");
+        printf("  O   |");
+        printf("  |   |");
+        printf(" /|   |");
+        printf("      |");
+        printf("=========");
+    }
+    if (wrongattempt == 4)
+    {
+        printf("  +---+");
+        printf("  |   |");
+        printf("  O   |");
+        printf("  |   |");
+        printf(" /|\  |");
+        printf("      |");
+        printf("=========");
+    }
+    if (wrongattempt == 5)
+    {
+        printf("  +---+");
+        printf("  |   |");
+        printf("  O   |");
+        printf("  |   |");
+        printf(" /|\  |");
+        printf(" / \  |");
+        printf("=========");
+    }
+}
