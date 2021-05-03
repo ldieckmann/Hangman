@@ -354,13 +354,13 @@ void HangmanVisualize()
         printf("=======\n");
     }
 }
-
+/*This function will print the Word Hangman as the headline*/
 void HangmanTitle()
 {
     printf("  _   _ \n");
     printf(" | | | |   __ _   _ __     __ _   _ __ ___     __ _   _ __ \n");
-    printf(" | |_| |  / _` | | '_ \   / _` | | '_ ` _ \   / _` | | '_ \  \n");
+    printf(" | |_| |  / _` | | '_ \\   / _` | | '_ ` _ \\   / _` | | '_ \\ \n");
     printf(" |  _  | | (_| | | | | | | (_| | | | | | | | | (_| | | | | | \n");
-    printf(" |_| |_|  \__,_| |_| |_|  \__, | |_| |_| |_|  \__,_| |_| |_| \n");
+    printf(" |_| |_|  \\__,_| |_| |_|  \\__, | |_| |_| |_|  \\__,_| |_| |_| \n");
     printf("                          |___/ \n");
 }
