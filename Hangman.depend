@@ -21,23 +21,29 @@
 	<stdbool.h>
 	<sys/time.h>
 
-<<<<<<< HEAD
-1620057260 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
-=======
-1620056431 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
->>>>>>> parent of d5dc7f7 (Renamed Files)
+1620056431 D
+	"TextFileManagement.h"
+	"visualize.h"
+
+1620057906 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<sys/time.h>
-<<<<<<< HEAD
-	"TextFileManagement.h"
-	"visualize.h"
-=======
 	"Textdatei.h"
 	"visualase.h"
->>>>>>> parent of d5dc7f7 (Renamed Files)
+
+1620056431 ent of d5dc7f7 (Renamed Files)
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	<sys/time.h>
+
+1620056431 .h"
+	"Textdatei.h"
+	"visualase.h"
 
 1620056244 source:c:\users\fekef\desktop\git\hangman\textdatei.c
 	"Textdatei.h"
@@ -48,7 +54,7 @@
 1620056401 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
-1620056431 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
+1620057906 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
 	"Textdatei.h"
 	<stdio.h>
 	<stdlib.h>
@@ -61,11 +67,10 @@
 
 1620056269 c:\users\fekef\desktop\git\hangman\textdatei.h
 
-1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
+1620057906 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
 
-1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
+1620057906 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
 
-<<<<<<< HEAD
 1620057270 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.c
 	"visualize.h"
 
@@ -79,5 +84,3 @@
 
 1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.h
 
-=======
->>>>>>> parent of d5dc7f7 (Renamed Files)
