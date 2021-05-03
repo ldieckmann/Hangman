@@ -19,7 +19,7 @@
 	<stdbool.h>
 	<sys/time.h>
 
-1620055126 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620055820 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -28,5 +28,11 @@
 
 1620054870 source:c:\users\fekef\desktop\git\hangman\textdatei.c
 
+
 1620055673 source:c:\users\fekef\desktop\git\hangman\visualase.c
+
+1620055231 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
+
+1620055231 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
+
 
