@@ -1,4 +1,4 @@
-#include "visualase.h"
+#include "visualize.h"
 /*This function will visualize the Hangman during the attemps of the user*/
 void HangmanVisualize(int wrongattempt)
 {
@@ -72,6 +72,14 @@ void HangmanVisualize(int wrongattempt)
         printf(" |      \n");
         printf(" =======\n");
     }
+}
+/*This function will print the game introductions*/
+void GameIntroduction()
+{
+    printf("---------------------------------------------------------\n");
+    printf("|**************** Welcome to Hangman *******************|\n");
+    printf("|Authors: David Nguyen, Louis Dieckmann, Sedad Deeg\t|\n");
+    printf("---------------------------------------------------------\n\n");
 }
 /*This function will print the Word Hangman as the headline*/
 void HangmanTitle()

@@ -21,13 +21,13 @@
 	<stdbool.h>
 	<sys/time.h>
 
-1620056700 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620057260 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<sys/time.h>
-	"Textdatei.h"
+	"TextFileManagement.h"
 	"visualize.h"
 
 1620056244 source:c:\users\fekef\desktop\git\hangman\textdatei.c
@@ -58,4 +58,14 @@
 
 1620056645 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.c
 	"visualase.h"
+
+1620057111 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textfilemanagement.c
+	"TextFileManagement.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\textfilemanagement.h
+
+1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.h
 

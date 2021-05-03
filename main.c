@@ -40,14 +40,6 @@ int main()
     HangmanVisualize(wrongattempt);
     return 0;
 }
-/*This function will print the game introductions*/
-void GameIntroduction()
-{
-    printf("---------------------------------------------------------\n");
-    printf("|**************** Welcome to Hangman *******************|\n");
-    printf("|Authors: David Nguyen, Louis Dieckmann, Sedad Deeg\t|\n");
-    printf("---------------------------------------------------------\n\n");
-}
 /*This function asks the player if he wants to play against the time*/
 void CheckPlayMode()
 {
