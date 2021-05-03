@@ -14,12 +14,14 @@
 	"Textdatei.h"
 	"visualase.h"
 
-1619364737 source:c:\git\hangman\main.c
+1620057954 source:c:\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<sys/time.h>
+	"Textdatei.h"
+	"visualase.h"
 
 1620056431 D
 	"TextFileManagement.h"
@@ -83,4 +85,11 @@
 1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\textfilemanagement.h
 
 1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.h
+
+1620057954 c:\git\hangman\textdatei.h
+
+1620057954 c:\git\hangman\visualase.h
+
+1620058142 source:c:\git\hangman\visualase.c
+	"visualase.h"
 
