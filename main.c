@@ -18,14 +18,14 @@ clock_t start, end;
 int main()
 {
     GameIntroduction();
-    CheckPlayMode();
+    //CheckPlayMode();
     ImportWordsFromWordlistFile();
     printf("\n");
     PrintSearchWordHidden();
     EnterPlayerNameIntoTextFile();
     /*start gets the current CPU time*/
     start = clock();
-    //PlayerGuess();
+    PlayerGuess();
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
     ExitAttempt();
