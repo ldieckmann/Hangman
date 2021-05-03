@@ -5,12 +5,14 @@
 	<string.h>
 	<stdbool.h>
 
-1620055854 source:c:\users\fekef\desktop\git\hangman\main.c
+1620056401 source:c:\users\fekef\desktop\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<sys/time.h>
+	"Textdatei.h"
+	"visualase.h"
 
 1619364737 source:c:\git\hangman\main.c
 	<stdio.h>
@@ -26,13 +28,20 @@
 	<stdbool.h>
 	<sys/time.h>
 
-1620054870 source:c:\users\fekef\desktop\git\hangman\textdatei.c
+1620056244 source:c:\users\fekef\desktop\git\hangman\textdatei.c
+	"Textdatei.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 
-
-1620055673 source:c:\users\fekef\desktop\git\hangman\visualase.c
+1620056401 source:c:\users\fekef\desktop\git\hangman\visualase.c
+	"visualase.h"
 
 1620055231 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
 
 1620055231 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
 
+1620056321 c:\users\fekef\desktop\git\hangman\visualase.h
+
+1620056269 c:\users\fekef\desktop\git\hangman\textdatei.h
 

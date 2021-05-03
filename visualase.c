@@ -1,6 +1,6 @@
 #include "visualase.h"
-int wrongattempt;
-void HangmanVisualize(){
+void HangmanVisualize(int wrongattempt)
+{
     if (wrongattempt == 0)
     {
         printf("+---+\n");
@@ -46,7 +46,7 @@ void HangmanVisualize(){
         printf("+---+\n");
         printf("|   |  \n");
         printf("|   O  \n");
-        printf("|  /|\ \n");
+        printf("|  /|\\ \n");
         printf("|      \n");
         printf("|      \n");
         printf("=======\n");
@@ -56,7 +56,7 @@ void HangmanVisualize(){
         printf("+---+\n");
         printf("|   |  \n");
         printf("|   O  \n");
-        printf("|  /|\ \n");
+        printf("|  /|\\ \n");
         printf("|  /   \n");
         printf("|      \n");
         printf("=======\n");
@@ -66,19 +66,19 @@ void HangmanVisualize(){
         printf("+---+\n");
         printf("|   |  \n");
         printf("|   O  \n");
-        printf("|  /|\ \n");
-        printf("|  / \ \n");
+        printf("|  /|\\ \n");
+        printf("|  / \\ \n");
         printf("|      \n");
         printf("=======\n");
     }
 }
-
+/*This function will print the Word Hangman as the headline*/
 void HangmanTitle()
 {
-    printf("      \n");
-    printf(" | | | |                             __ \n");
-    printf(" | || |  / ` | | ' \   / ` | | '  _ \\   / _ | | ' \  \n");
-    printf(" |    | | (| | | | | | | (| | | | | | | | | (| | | | | | \n");
-    printf(" || ||  \__,| || ||  \, | || || |_|  \,| || || \n");
-    printf("                          |__/ \n");
+    printf("  _   _ \n");
+    printf(" | | | |   __ _   _ __     __ _   _ __ ___     __ _   _ __ \n");
+    printf(" | |_| |  / _` | | '_ \\   / _` | | '_ ` _ \\   / _` | | '_ \\  \n");
+    printf(" |  _  | | (_| | | | | | | (_| | | | | | | | | (_| | | | | | \n");
+    printf(" |_| |_|  \\__,_| |_| |_|  \\__, | |_| |_| |_|  \\__,_| |_| |_| \n");
+    printf("                          |___/ \n");
 }

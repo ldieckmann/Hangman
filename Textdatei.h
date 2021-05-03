@@ -1,6 +1,8 @@
 #ifndef TEXTDATEI_H_INCLUDED
 #define TEXTDATEI_H_INCLUDED
 
-void ImportWordsFromWordlistFile()
+char searchword[25];
+
+void ImportWordsFromWordlistFile();
 
 #endif // TEXTDATEI_H_INCLUDED
