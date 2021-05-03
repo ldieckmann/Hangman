@@ -18,19 +18,16 @@ clock_t start, end;
 
 int main()
 {
-    GameIntroduction();
+    //GameIntroduction();
 
     //suche spiel aus
     //starte spiel
 
     //CheckPlayMode();
-
     ImportWordsFromWordlistFile();
-    printf("\n");
-    PrintSearchWordHidden();
     EnterPlayerNameIntoTextFile();
     /*start gets the current CPU time*/
-    start = clock();
+    //start = clock();
     PlayerGuess();
     /*Call of the function which measures the total game time*/
     TimeMeasurement();
@@ -94,8 +91,8 @@ void PlayerGuess()
         exists = false;
         printf("Guess the letters of the searched word: ");
         scanf(" %c",&userGuess);
-        userGuess = tolower(getchar());
-        printf("\n");
+        userGuess = tolower(userGuess);
+        //printf("\n");
         for(int i = 0; i < strlen(searchword); i++)
         {
             if (searchword[i] == userGuess)
