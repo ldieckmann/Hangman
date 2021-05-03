@@ -6,6 +6,7 @@
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
 char guessedWord[25];
+char triedChars[29];
 //char ArrayOfGuessedLetters[100];
 int wrongattempt = 0, rightattempt = 0;
 
@@ -17,6 +18,8 @@ clock_t start, end;
 int main()
 {
     GameIntroduction();
+    //suche spiel aus
+    //starte spiel
     ImportWordsFromWordlistFile();
     printf("\n");
     PrintSearchWordHidden();
@@ -60,7 +63,7 @@ void PlayerGuess()
     {
         exists = false;
         printf("Guess the letters of the searched word: ");
-        scanf("%c",&userGuess);
+        scanf(" %c",&userGuess);
         userGuess = tolower(getchar());
         printf("\n");
         for(int i = 0; i < strlen(searchword); i++)
@@ -90,7 +93,8 @@ void PlayerGuess()
             printf("Your guess is wrong.\n");
             wrongattempt+=1;
         }
-    } while(CompareCharacters != strlen(searchword));
+    }
+    while(CompareCharacters != strlen(searchword));
 }
 /*This function does replace the char*/
 void ReplaceChar(int j)
@@ -156,6 +160,27 @@ void GameCountdown()
         while(currTime<endTime);
         // eine Sekunde ist um
         countdownSec--;
+    }
+}
+/*This function returns the chars which where already tried*/
+void ExitTriedChars(char triedChar)
+{
+    int i, j;
+    char tmp;
+
+    triedChars.insert(triedChar);
+
+    for (i = 1; i < strlen(triedChars); i++)
+    {
+        for (j = 0; j < strlen(triedChars)- 1 ; j++)
+        {
+            if (triedChars[j] > triedChars[j + 1])
+            {
+                tmp = triedChars[j];
+                triedChars[j] = triedChars[j + 1];
+                triedChars[j + 1] = tmp;
+            }
+        }
     }
 }
 /*This function saves the player name into the playername.txt textfile*/
