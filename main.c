@@ -124,6 +124,7 @@ void PlayerGuess()
         {
             printf("Your guess is wrong.\n");
             wrongattempt+=1;
+            HangmanVisualize();
         }
     }
     while(CompareCharacters != strlen(searchword));
@@ -284,62 +285,62 @@ void HangmanVisualize()
 {
     if (wrongattempt == 0)
     {
-        printf("  +---+");
-        printf("  |   |");
-        printf("      |");
-        printf("      |");
-        printf("      |");
-        printf("      |");
-        printf("=========");
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
     }
     if (wrongattempt == 1)
     {
-        printf("  +---+");
-        printf("  |   |");
-        printf("  O   |");
-        printf("      |");
-        printf("      |");
-        printf("      |");
-        printf("=========");
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
     }
     if (wrongattempt == 2)
     {
-        printf("  +---+");
-        printf("  |   |");
-        printf("  O   |");
-        printf("  |   |");
-        printf("      |");
-        printf("      |");
-        printf("=========");
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("  |   |\n");
+        printf("      |\n");
+        printf("      |\n");
+        printf("=========\n");
     }
     if (wrongattempt == 3)
     {
-        printf("  +---+");
-        printf("  |   |");
-        printf("  O   |");
-        printf("  |   |");
-        printf(" /|   |");
-        printf("      |");
-        printf("=========");
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("  |   |\n");
+        printf(" /|   |\n");
+        printf("      |\n");
+        printf("=========\n");
     }
     if (wrongattempt == 4)
     {
-        printf("  +---+");
-        printf("  |   |");
-        printf("  O   |");
-        printf("  |   |");
-        printf(" /|\  |");
-        printf("      |");
-        printf("=========");
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("  |   |\n");
+        printf(" /|\  |\n");
+        printf("      |\n");
+        printf("=========\n");
     }
     if (wrongattempt == 5)
     {
-        printf("  +---+");
-        printf("  |   |");
-        printf("  O   |");
-        printf("  |   |");
-        printf(" /|\  |");
-        printf(" / \  |");
-        printf("=========");
+        printf("  +---+\n");
+        printf("  |   |\n");
+        printf("  O   |\n");
+        printf("  |   |\n");
+        printf(" /|\  |\n");
+        printf(" / \  |\n");
+        printf("=========\n");
     }
 }
