@@ -31,9 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Textdatei.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Textdatei.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="visualase.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="visualase.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

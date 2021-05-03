@@ -24,15 +24,16 @@ int main()
     //starte spiel
 
     //CheckPlayMode();
-    ImportWordsFromWordlistFile();
-    EnterPlayerNameIntoTextFile();
+    //ImportWordsFromWordlistFile();
+    //EnterPlayerNameIntoTextFile();
     /*start gets the current CPU time*/
     //start = clock();
-    PlayerGuess();
+    //PlayerGuess();
     /*Call of the function which measures the total game time*/
-    TimeMeasurement();
-    ExitAttempt();
+    //TimeMeasurement();
+    //ExitAttempt();
     //printf("%s",searchword);
+    HangmanVisualize();
     return 0;
 }
 /*This function will print the game introductions*/
