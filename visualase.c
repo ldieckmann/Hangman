@@ -1,4 +1,5 @@
 #include "visualase.h"
+/*This function will visualize the Hangman during the attemps of the user*/
 void HangmanVisualize(int wrongattempt)
 {
     if (wrongattempt == 0)
