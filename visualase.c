@@ -3,73 +3,73 @@ void HangmanVisualize(int wrongattempt)
 {
     if (wrongattempt == 0)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
     if (wrongattempt == 1)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
     if (wrongattempt == 2)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|   |  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |   |  \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
     if (wrongattempt == 3)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|  \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |  /|  \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
     if (wrongattempt == 4)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|\\ \n");
-        printf("|      \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |  /|\\ \n");
+        printf(" |      \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
     if (wrongattempt == 5)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|\\ \n");
-        printf("|  /   \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |  /|\\ \n");
+        printf(" |  /   \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
     if (wrongattempt == 6)
     {
-        printf("+---+\n");
-        printf("|   |  \n");
-        printf("|   O  \n");
-        printf("|  /|\\ \n");
-        printf("|  / \\ \n");
-        printf("|      \n");
-        printf("=======\n");
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |  /|\\ \n");
+        printf(" |  / \\ \n");
+        printf(" |      \n");
+        printf(" =======\n");
     }
 }
 /*This function will print the Word Hangman as the headline*/
