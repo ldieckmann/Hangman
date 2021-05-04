@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include <sys/time.h>
+
 #include "Textdatei.h"
 #include "visualase.h"
+#include "game.h"
 int playmode; //playmode 0 = casual; playmode 1 = against the time;
 char playername[20];
 char searchword[25]; //The word which is searched for (imported from textfile)
@@ -15,8 +16,7 @@ int wrongattempt = 0, rightattempt = 0;
 
 /*Time measurement variables*/
 long i;
-float totalTime;
-clock_t start, end;
+
 
 int main()
 {
@@ -40,6 +40,7 @@ int main()
     HangmanVisualize(wrongattempt);
     return 0;
 }
+
 /*This function asks the player if he wants to play against the time*/
 void CheckPlayMode()
 {
@@ -67,16 +68,19 @@ void CheckPlayMode()
         while((yesOrNo != 'y') | (yesOrNo != 'n')); //Repeats an Error message until the player selects the valid playmode
     }
 }
+
 /*This function will execute the casual playmode*/
 void playmodeCasual()
 {
     PlayerGuess();
 }
+
 /*This function will execute the against the time playmode*/
 void PlayModeAgainstTheTime()
 {
 
 }
+
 /*This function will let the player guess the letters of the searchword*/
 void PlayerGuess()
 {
@@ -123,11 +127,13 @@ void PlayerGuess()
     }
     while(CompareCharacters != strlen(searchword));
 }
+
 /*This function does replace the char*/
 void ReplaceChar(int j)
 {
     searchword[j] = 42;
 }
+
 /*This function prints the searchword, but with hidden letters.*/
 void PrintSearchWordHidden()
 {
@@ -141,54 +147,12 @@ void PrintSearchWordHidden()
     printf("\n\n");
 }
 
-/*This function measures the game time in seconds*/
-void TimeMeasurement()
-{
-    /*time measurement*/
-    for(i=0; i<200000000; i++);
 
-    /*stop gets the current CPU time*/
-    end = clock();
 
-    /*Result of the Runtime measuring in seconds*/
-    totalTime = (float)(end-start) / (float)CLOCKS_PER_SEC;
 
-    printf("The Game was running %.2f seconds\n",totalTime);
-}
 
-void ExitAttempt()
-{
-    printf("You had %i right and %i wrong attempts\n",rightattempt,wrongattempt);
-}
 
-void GameCountdown()
-{
-    clock_t currTime;
-    clock_t endTime;
 
-    int countdownSec = 30;
-
-    /**
-    printf("Bitte Sekunden eingeben ");
-    scanf("%d",&countdownSec);
-    **/
-
-    while(countdownSec!=0)
-    {
-        // Ausgabe
-        printf("Nur noch %d\n",countdownSec);
-        // Ende_Zeit berechnen
-        endTime=clock()+CLOCKS_PER_SEC;
-        do
-        {
-            // Aktuelle_Zeit auslesen
-            currTime=clock();
-        }
-        while(currTime<endTime);
-        // eine Sekunde ist um
-        countdownSec--;
-    }
-}
 /*This function returns the chars which where already tried*/
 void ExitTriedChars(char triedChar)
 {
