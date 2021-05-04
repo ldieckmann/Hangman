@@ -14,7 +14,7 @@
 	"visualase.h"
 	"game.h"
 
-1620156766 source:c:\git\hangman\main.c
+1620157190 source:c:\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -127,7 +127,7 @@
 	"time.h"
 	<sys/time.h>
 
-1620156901 source:c:\git\hangman\textdatei.c
+1620157148 source:c:\git\hangman\textdatei.c
 	"Textdatei.h"
 	<stdio.h>
 	<stdlib.h>

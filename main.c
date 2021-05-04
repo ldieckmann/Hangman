@@ -9,7 +9,7 @@
 
 int main()
 {
-
+SafeHighscoreList();
     return 0;
 }
 
