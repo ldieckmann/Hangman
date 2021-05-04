@@ -95,7 +95,7 @@ void HangmanTitle()
 /*This function prints the searchword, but with hidden letters.*/
 void PrintSearchWordHidden(char searchWord[25])
 {
-
+    printf("%s",searchWord);
 }
 
 void ExitAttempt(int totalAttempt,int wrongAttempt)
@@ -106,6 +106,14 @@ void ExitAttempt(int totalAttempt,int wrongAttempt)
 void EndGame(int totalAttempt,int wrongAttempt)
 {
     ExitAttempt(totalAttempt,wrongAttempt);
-    printf("Gameower");
+    printf("Gameover");
 
+}
+
+void ExitTries(char tries[50])
+{
+    for(int i=0;i<strlen(tries);i++)
+    {
+        printf("%c",tries[i]);
+    }
 }

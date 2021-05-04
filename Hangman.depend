@@ -5,7 +5,7 @@
 	<string.h>
 	<stdbool.h>
 
-1620155519 source:c:\users\fekef\desktop\git\hangman\main.c
+1620162676 source:c:\users\fekef\desktop\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -47,13 +47,13 @@
 	"Textdatei.h"
 	"visualase.h"
 
-1620155079 source:c:\users\fekef\desktop\git\hangman\textdatei.c
+1620160545 source:c:\users\fekef\desktop\git\hangman\textdatei.c
 	"Textdatei.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1620152783 source:c:\users\fekef\desktop\git\hangman\visualase.c
+1620163069 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
 1620057906 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
@@ -93,7 +93,7 @@
 1620154187 source:c:\git\hangman\visualase.c
 	"visualase.h"
 
-1620156336 source:c:\users\fekef\desktop\git\hangman\game.c
+1620164876 source:c:\users\fekef\desktop\git\hangman\game.c
 	"game.h"
 	<stdio.h>
 	<stdlib.h>

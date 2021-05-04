@@ -13,9 +13,7 @@ int main()
     HangmanTitle();
     GameIntroduction();
     CheckPlayMode();
-
-
-SafeHighscoreList();
+    StartGame();
 
     return 0;
 }
