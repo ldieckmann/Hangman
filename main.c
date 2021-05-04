@@ -9,7 +9,6 @@
 
 int main()
 {
-    CheckPlayMode()
 
     return 0;
 }

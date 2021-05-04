@@ -28,14 +28,25 @@ void ImportWordsFromWordlistFile()
 /*This function will safe the searched word, playername, amount of guesses and the current time */
 void SafeHighscoreList()
 {
+
     FILE *highscorelist;
-    highscorelist = fopen("highscorelist.txt", "w+");
+    int i;
+    int array[4];
+    highscorelist = fopen("highscorelist.csv", "w+");
      if(highscorelist == NULL)
     {
         printf("Error: This document cannot be opened!");
     }
     else
     {
+        fprintf(highscorelist, "Searchword, Playername, Amount of guesses, Time");
+        for(i = 0; i < strlen(array); i++)
+        {
+            fprintf(highscorelist,"%d", array[i]);
+        }
+        fclose(highscorelist);
+        highscorelist = 0;
+        system("pause");
         //SOURCE: https://austinrepp.com/how-to-write-to-a-csv-file-in-c/
         //fprintf("Searchword, Playername, amount of guesses and time\n");
         //fprintf("%c, %s, %i, %i", searchword, playername, TimeMeasurement);
