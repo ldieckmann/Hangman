@@ -4,9 +4,10 @@
 
 float totalTime;
 clock_t start, end;
-int i;
+long i;
 
 void TimeMeasurement();
 void GameCountdown();
+long TimeLeft();
 
 #endif // TIME_H_INCLUDED

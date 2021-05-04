@@ -2,7 +2,10 @@
 #include <sys/time.h>
 float totalTime;
 clock_t start, end;
-int i;
+clock_t currTime;
+clock_t endTime;
+/*Time measurement variables*/
+long i;
 
 /*This function measures the game time in seconds*/
 void TimeMeasurement()
@@ -21,8 +24,7 @@ void TimeMeasurement()
 
 void GameCountdown()
 {
-    clock_t currTime;
-    clock_t endTime;
+
 
     int countdownSec = 30;
 
@@ -46,4 +48,9 @@ void GameCountdown()
         // eine Sekunde ist um
         countdownSec--;
     }
+}
+
+long TimeLeft()
+{
+
 }

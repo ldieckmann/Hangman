@@ -6,146 +6,28 @@
 #include "Textdatei.h"
 #include "visualase.h"
 #include "game.h"
-int playmode; //playmode 0 = casual; playmode 1 = against the time;
-char playername[20];
-char searchword[25]; //The word which is searched for (imported from textfile)
-char guessedWord[25];
-char triedChars[30];
-//char ArrayOfGuessedLetters[100];
-int wrongattempt = 0, rightattempt = 0;
 
-/*Time measurement variables*/
-long i;
+
+
+
+
+
+
+
 
 
 int main()
 {
-    HangmanTitle();
-    GameIntroduction();
-    //GameIntroduction();
 
-    //suche spiel aus
-    //starte spiel
-
-    //CheckPlayMode();
-    //ImportWordsFromWordlistFile();
-    //EnterPlayerNameIntoTextFile();
-    /*start gets the current CPU time*/
-    //start = clock();
-    //PlayerGuess();
-    /*Call of the function which measures the total game time*/
-    //TimeMeasurement();
-    //ExitAttempt();
-    //printf("%s",searchword);
-    HangmanVisualize(wrongattempt);
     return 0;
 }
 
-/*This function asks the player if he wants to play against the time*/
-void CheckPlayMode()
-{
-    char yesOrNo;
-    printf("Do you want to play against the time? (y/n): ");
-    scanf(" %c", tolower(yesOrNo));
 
-    if (yesOrNo == 'n')
-    {
-        playmode = 0; //playmode 0 = casual
-        playmodeCasual();
-    }
-    if (yesOrNo == 'y')
-    {
-        playmode = 1; //playmode 1 = against the time
-        PlayModeAgainstTheTime();
-    }
-    if((yesOrNo != 'y') | (yesOrNo != 'n'))
-    {
-        do
-        {
-            printf("Error: Your input is invalid.\n");
-            printf("Please type y/n.\n");
-        }
-        while((yesOrNo != 'y') | (yesOrNo != 'n')); //Repeats an Error message until the player selects the valid playmode
-    }
-}
 
-/*This function will execute the casual playmode*/
-void playmodeCasual()
-{
-    PlayerGuess();
-}
 
-/*This function will execute the against the time playmode*/
-void PlayModeAgainstTheTime()
-{
 
-}
 
-/*This function will let the player guess the letters of the searchword*/
-void PlayerGuess()
-{
-    int CompareCharacters = 0;
-    bool exists = false;
-    bool checkForExistingLetter = false;
-    char userGuess;
 
-    do
-    {
-        exists = false;
-        printf("Guess the letters of the searched word: ");
-        scanf(" %c",&userGuess);
-        userGuess = tolower(userGuess);
-        //printf("\n");
-        for(int i = 0; i < strlen(searchword); i++)
-        {
-            if (searchword[i] == userGuess)
-            {
-                exists = true;
-                CompareCharacters = CompareCharacters + 1;
-                ReplaceChar(i);
-            }
-            if(exists == false)
-            {
-                if (searchword[i] == "-")
-                {
-                    exists= false;
-                }
-            }
-        }
-
-        if (exists == true)
-        {
-            printf("Your guess is right.\n");
-            rightattempt+=1;
-        }
-        else
-        {
-            printf("Your guess is wrong.\n");
-            wrongattempt+=1;
-            HangmanVisualize(wrongattempt);
-        }
-    }
-    while(CompareCharacters != strlen(searchword));
-}
-
-/*This function does replace the char*/
-void ReplaceChar(int j)
-{
-    searchword[j] = 42;
-}
-
-/*This function prints the searchword, but with hidden letters.*/
-void PrintSearchWordHidden()
-{
-    char searchwordHidden[strlen(searchword)];
-    printf("Try to guess the hidden word: ");
-    for(i=0; i<strlen(searchword); i++)
-    {
-        searchwordHidden[i] = 95;
-        printf("%s ",&searchwordHidden[i]);
-    }
-    printf("\n\n");
-}
 
 
 
@@ -154,48 +36,8 @@ void PrintSearchWordHidden()
 
 
 /*This function returns the chars which where already tried*/
-void ExitTriedChars(char triedChar)
-{
-    int i, j;
-    char tmp;
 
-    triedChars[30] = triedChar;
 
-    for (i = 1; i < strlen(triedChars); i++)
-    {
-        for (j = 0; j < strlen(triedChars)- 1 ; j++)
-        {
-            if (triedChars[j] > triedChars[j + 1])
-            {
-                tmp = triedChars[j];
-                triedChars[j] = triedChars[j + 1];
-                triedChars[j + 1] = tmp;
-            }
-        }
-    }
-}
-/*This function saves the player name into the playername.txt textfile*/
-void EnterPlayerNameIntoTextFile()
-{
-    FILE *playernames;
-    char name[20];
-
-    playernames = fopen("playername.txt", "a");
-    if(playernames == NULL)
-    {
-        printf("Error: This Document cannot be opened!\n");
-    }
-    else
-    {
-        printf("Enter your Player Name: ");
-        scanf("%s", &name);
-        fprintf(playernames, name);
-        fprintf(playernames, "\n");
-
-        printf("Your Player Name is: %s\n\n", &name);
-    }
-    fclose(playernames);
-}
 /*This function does read the word from the textfile (wordlist.txt)*/
 
 /*This function will suggest player names from the textfile (playername.txt)*/

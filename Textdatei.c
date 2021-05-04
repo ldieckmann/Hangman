@@ -42,3 +42,25 @@ void SafeHighscoreList()
     }
 
 }
+/*This function saves the player name into the playername.txt textfile*/
+void EnterPlayerNameIntoTextFile()
+{
+    FILE *playernames;
+    char name[20];
+
+    playernames = fopen("playername.txt", "a");
+    if(playernames == NULL)
+    {
+        printf("Error: This Document cannot be opened!\n");
+    }
+    else
+    {
+        printf("Enter your Player Name: ");
+        scanf("%s", &name);
+        fprintf(playernames, name);
+        fprintf(playernames, "\n");
+
+        printf("Your Player Name is: %s\n\n", &name);
+    }
+    fclose(playernames);
+}

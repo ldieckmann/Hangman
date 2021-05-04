@@ -5,7 +5,7 @@
 	<string.h>
 	<stdbool.h>
 
-1620149272 source:c:\users\fekef\desktop\git\hangman\main.c
+1620153811 source:c:\users\fekef\desktop\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -53,7 +53,7 @@
 	<stdlib.h>
 	<string.h>
 
-1620058268 source:c:\users\fekef\desktop\git\hangman\visualase.c
+1620152783 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
 1620057906 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
@@ -65,7 +65,7 @@
 1620058089 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
 	"visualase.h"
 
-1620057961 c:\users\fekef\desktop\git\hangman\visualase.h
+1620151983 c:\users\fekef\desktop\git\hangman\visualase.h
 
 1620057961 c:\users\fekef\desktop\git\hangman\textdatei.h
 
@@ -93,15 +93,20 @@
 1620058142 source:c:\git\hangman\visualase.c
 	"visualase.h"
 
-1620149391 source:c:\users\fekef\desktop\git\hangman\game.c
+1620153778 source:c:\users\fekef\desktop\git\hangman\game.c
 	"game.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	"time.h"
 
-1620149070 c:\users\fekef\desktop\git\hangman\game.h
+1620151169 c:\users\fekef\desktop\git\hangman\game.h
 
-1620149272 source:c:\users\fekef\desktop\git\hangman\time.c
+1620150593 source:c:\users\fekef\desktop\git\hangman\time.c
 	"time.h"
 	<sys/time.h>
 
-1620149410 c:\users\fekef\desktop\git\hangman\time.h
+1620150620 c:\users\fekef\desktop\git\hangman\time.h
 	<sys/time.h>
 
