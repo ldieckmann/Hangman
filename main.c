@@ -7,17 +7,9 @@
 #include "visualase.h"
 #include "game.h"
 
-
-
-
-
-
-
-
-
-
 int main()
 {
+    CheckPlayMode()
 
     return 0;
 }
