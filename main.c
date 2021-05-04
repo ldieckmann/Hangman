@@ -9,7 +9,9 @@
 
 int main()
 {
-    CheckPlayMode()
+    HangmanTitle();
+    GameIntroduction();
+    CheckPlayMode();
 
     return 0;
 }

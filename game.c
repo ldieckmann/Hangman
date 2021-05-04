@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 #include "time.h"
 
 /*This function asks the player if he wants to play against the time*/
@@ -20,8 +21,12 @@ void CheckPlayMode()
 {
     char yesOrNo;
     printf("Do you want to play against the time? (y/n): ");
-    scanf(" %c", tolower(yesOrNo));
-
+    scanf("%c", &yesOrNo);
+    while((yesOrNo != 'y') && (yesOrNo != 'n')) //Repeats an Error message until the player selects the valid playmode
+    {
+        printf("Do you want to play against the time? (y/n): ");
+        scanf("%c", &yesOrNo);
+    }
     if (yesOrNo == 'n')
     {
         playmode = 0; //playmode 0 = casual
@@ -32,15 +37,8 @@ void CheckPlayMode()
         playmode = 1; //playmode 1 = against the time
         PlayModeAgainstTheTime();
     }
-    if((yesOrNo != 'y') | (yesOrNo != 'n'))
-    {
-        do
-        {
-            printf("Error: Your input is invalid.\n");
-            printf("Please type y/n.\n");
-        }
-        while((yesOrNo != 'y') | (yesOrNo != 'n')); //Repeats an Error message until the player selects the valid playmode
-    }
+
+
 }
 
 
@@ -49,7 +47,7 @@ void PlaymodeCasual()
 {
     if (wrongAttempt < 7)
     {
-
+        PlayerGuess();
     }
     else
     {
@@ -169,7 +167,7 @@ void AddToTriedChars(char currentGuess)
     }
     if (!alreadyExists)
     {
-            triedChars[50] = currentGuess;
+        triedChars[50] = currentGuess;
     }
 }
 void ExitTriedChars(char triedChar)
