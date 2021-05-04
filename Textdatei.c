@@ -47,6 +47,7 @@ void EnterPlayerNameIntoTextFile()
 {
     FILE *playernames;
     char name[20];
+    int i;
 
     playernames = fopen("playername.txt", "a");
     if(playernames == NULL)
@@ -57,10 +58,14 @@ void EnterPlayerNameIntoTextFile()
     {
         printf("Enter your Player Name: ");
         scanf("%s", &name);
-        fprintf(playernames, name);
-        fprintf(playernames, "\n");
+        for(i = 0; i <strlen(name); i++)
+        {
+            fputc(name[i], playernames);
+        }
+        //add new line
+        fputc(10, playernames);
+        fclose(playernames);
 
         printf("Your Player Name is: %s\n\n", &name);
     }
-    fclose(playernames);
 }
