@@ -2,21 +2,11 @@
 /*This function will visualize the Hangman during the attemps of the user*/
 void HangmanVisualize(int wrongAttempt)
 {
-    if (wrongAttempt == 0)
-    {
-        printf(" +---+\n");
-        printf(" |   |  \n");
-        printf(" |      \n");
-        printf(" |      \n");
-        printf(" |      \n");
-        printf(" |      \n");
-        printf(" =======\n");
-    }
     if (wrongAttempt == 1)
     {
         printf(" +---+\n");
         printf(" |   |  \n");
-        printf(" |   O  \n");
+        printf(" |      \n");
         printf(" |      \n");
         printf(" |      \n");
         printf(" |      \n");
@@ -27,7 +17,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" +---+\n");
         printf(" |   |  \n");
         printf(" |   O  \n");
-        printf(" |   |  \n");
+        printf(" |      \n");
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
@@ -37,7 +27,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" +---+\n");
         printf(" |   |  \n");
         printf(" |   O  \n");
-        printf(" |  /|  \n");
+        printf(" |   |  \n");
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
@@ -47,7 +37,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" +---+\n");
         printf(" |   |  \n");
         printf(" |   O  \n");
-        printf(" |  /|\\ \n");
+        printf(" |  /|  \n");
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
@@ -58,11 +48,21 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |   |  \n");
         printf(" |   O  \n");
         printf(" |  /|\\ \n");
-        printf(" |  /   \n");
+        printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
     }
     if (wrongAttempt == 6)
+    {
+        printf(" +---+\n");
+        printf(" |   |  \n");
+        printf(" |   O  \n");
+        printf(" |  /|\\ \n");
+        printf(" |  /   \n");
+        printf(" |      \n");
+        printf(" =======\n");
+    }
+    if (wrongAttempt == 7)
     {
         printf(" +---+\n");
         printf(" |   |  \n");
