@@ -9,9 +9,13 @@
 
 int main()
 {
+
     HangmanTitle();
     GameIntroduction();
     CheckPlayMode();
+
+
+SafeHighscoreList();
 
     return 0;
 }
