@@ -46,6 +46,7 @@ void GetSearchWord()
 {
     searchWord[25] =  PickRandomWord();
 }
+
 void StartGame()
 {
     StartClock();
@@ -185,6 +186,7 @@ void ReplaceCharInConsealedWord(int placeInChar,char charToPlace)
     toReplaceWord[placeInChar] = charToPlace;
     searchWord[placeInChar]=95;
 }
+
 void AddToTriedChars(char currentGuess)
 {
     bool alreadyExists = false;

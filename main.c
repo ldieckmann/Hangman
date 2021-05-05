@@ -11,8 +11,6 @@
 int main()
 {
 
-    SafeHighscoreList(PickRandomWord());
-    Encryption();
     HangmanTitle();
     GameIntroduction();
     EnterPlayerName();

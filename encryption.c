@@ -23,7 +23,8 @@ int Encryption()
 }
 /*This function does encrypt the wordlist textfile*/
 /*This function is NOT FINISHED !!*/
-int Decryption() {
+int Decryption()
+{
 
     char sourceFile[50] = "wordlist.txt", targetFile[53], ch;
     FILE* fs;

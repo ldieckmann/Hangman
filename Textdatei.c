@@ -1,11 +1,12 @@
 #include "Textdatei.h"
+#include "time.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 char searchWord[25];
 /*This function will safe the searched word, playername, amount of guesses and the current time */
-void SafeHighscoreList(char playername[25],int totalAttempt,float totalTime)
+void SafeHighscoreList(char playername[25],int totalAttempt)
 {
     FILE *highscorelist;
     highscorelist = fopen("highscorelist.csv", "w+");
@@ -16,15 +17,13 @@ void SafeHighscoreList(char playername[25],int totalAttempt,float totalTime)
     else
     {
 
-        fprintf(highscorelist, "Searchword;Playername;Total Attempt;Time");
-        fprintf(highscorelist, "%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+        fprintf(highscorelist, "Searchword;Playername;Total Attempt");
+        fprintf(highscorelist, "%s;%s,%i",searchWord,playername,totalAttempt);
 
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
             */
-       // }
         fclose(highscorelist);
-        highscorelist = 0;
     }
 
 }
