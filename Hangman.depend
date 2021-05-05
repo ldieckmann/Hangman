@@ -5,13 +5,7 @@
 	<string.h>
 	<stdbool.h>
 
-1620247426 source:c:\users\fekef\desktop\git\hangman\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<stdbool.h>
-	"encryption.h"
-	"Textdatei.h"
+1620249186 source:c:\users\fekef\desktop\git\hangman\main.c
 	"visualase.h"
 	"game.h"
 	"encryption.h"
@@ -53,14 +47,13 @@
 	"Textdatei.h"
 	"visualase.h"
 
-1620247865 source:c:\users\fekef\desktop\git\hangman\textdatei.c
+1620249343 source:c:\users\fekef\desktop\git\hangman\textdatei.c
 	"Textdatei.h"
-	"time.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1620245512 source:c:\users\fekef\desktop\git\hangman\visualase.c
+1620248598 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
 1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
@@ -101,7 +94,7 @@
 1620246775 source:c:\git\hangman\visualase.c
 	"visualase.h"
 
-1620247865 source:c:\users\fekef\desktop\git\hangman\game.c
+1620249517 source:c:\users\fekef\desktop\git\hangman\game.c
 	"game.h"
 	"encryption.h"
 	<stdio.h>
@@ -169,7 +162,7 @@
 
 1620248151 c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.h
 
-1620247865 source:c:\users\fekef\desktop\git\hangman\encryption.c
+1620248141 source:c:\users\fekef\desktop\git\hangman\encryption.c
 	<stdio.h>
 
 1620247863 c:\users\fekef\desktop\git\hangman\encryption.h

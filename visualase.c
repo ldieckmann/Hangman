@@ -115,9 +115,10 @@ void ExitAttempt(int totalAttempt,int rightAttempt)
 void Won(char playername[20],int totalAttempt,int rightAttempt)
 {
     printf("%s has won with ",playername);
-    ExitAttempt(totalAttempt,rightAttempt); //shows the number of total attempts and right attempts
+    EndGame(totalAttempt,rightAttempt); //shows the number of total attempts and right attempts
     TimeMeasurement(); //the time measurement function is called here
     ExitTriedChars(); //the exit tried chars function is called here
+    SafeHighscoreList(playername,totalAttempt);
 }
 /*This function will be executed if the player has lost the game*/
 void Lose(char playername[20],int totalAttempt,int rightAttempt)

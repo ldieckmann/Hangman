@@ -24,6 +24,7 @@ int Encryption()
 }
 /*This function does encrypt the wordlist textfile*/
 /*This function is NOT FINISHED !!*/
+
 /*
 int Decryption() {
 

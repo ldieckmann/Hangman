@@ -1,3 +1,10 @@
-Kaffee
-Baum
-Busch
+kaffee
+baum
+busch
+schule
+menschen
+tag
+nacht
+licht
+dunkel
+hell

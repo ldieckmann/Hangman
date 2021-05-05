@@ -21,26 +21,27 @@ void EnterPlayerName()
 {
     printf("Please enter your username: ");
     scanf("%s",playername);
+    EnterPlayerNameIntoTextFile(playername);
 }
 /*This function asks the player if he wants to play against the time*/
-void CheckPlayMode()
-{
-    char yesOrNo;
-    printf("Do you want to play against the time? (y/n): ");
-    scanf("%c", &yesOrNo);
-    while((yesOrNo != 'y') && (yesOrNo != 'n')) //Repeats an Error message until the player selects the valid playmode
-    {
-        scanf("%c", &yesOrNo);
-    }
-    if (yesOrNo == 'n')
-    {
-        playmode = 0; //playmode 0 = casual
-    }
-    if (yesOrNo == 'y')
-    {
-        playmode = 1; //playmode 1 = against the time
-    }
-}
+//void CheckPlayMode()
+//{
+//    char yesOrNo;
+//    printf("Do you want to play against the time? (y/n): ");
+//    scanf("%c", &yesOrNo);
+//    while((yesOrNo != 'y') && (yesOrNo != 'n')) //Repeats an Error message until the player selects the valid playmode
+//    {
+//        scanf("%c", &yesOrNo);
+//    }
+//    if (yesOrNo == 'n')
+//    {
+//        playmode = 0; //playmode 0 = casual
+//    }
+//    if (yesOrNo == 'y')
+//    {
+//        playmode = 1; //playmode 1 = against the time
+//    }
+//}
 /*This function gets the searched word*/
 void GetSearchWord()
 {
