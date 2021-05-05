@@ -11,6 +11,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
     if (wrongAttempt == 2)
     {
@@ -21,6 +22,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
     if (wrongAttempt == 3)
     {
@@ -31,6 +33,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
     if (wrongAttempt == 4)
     {
@@ -41,6 +44,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
     if (wrongAttempt == 5)
     {
@@ -51,6 +55,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |      \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
     if (wrongAttempt == 6)
     {
@@ -61,6 +66,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |  /   \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
     if (wrongAttempt == 7)
     {
@@ -71,6 +77,7 @@ void HangmanVisualize(int wrongAttempt)
         printf(" |  / \\ \n");
         printf(" |      \n");
         printf(" =======\n");
+        printf("\n");
     }
 }
 /*This function will print the game introductions*/
@@ -80,6 +87,7 @@ void GameIntroduction()
     printf("|**************** Welcome to Hangman *******************|\n");
     printf("|Authors: David Nguyen, Louis Dieckmann, Sedad Deeg\t|\n");
     printf("---------------------------------------------------------\n\n");
+    printf("\n");
 }
 /*This function will print the Word Hangman as the headline*/
 void HangmanTitle()
@@ -107,16 +115,6 @@ void ExitAttempt(int totalAttempt,int rightAttempt)
 void EndGame(int totalAttempt,int rightAttempt)
 {
     ExitAttempt(totalAttempt,rightAttempt);
-}
-
-void ExitTries(char tries[50])
-{
-    for(int i=0;i<strlen(tries);i++)
-    {
-        printf("Tried letters: ");
-        printf("%c ",tries[i]);
-    }
-    printf("\n");
 }
 
 void Won(char playername[20],int totalAttempt,int rightAttempt)

@@ -13,7 +13,7 @@ int totalAttempt = 0, wrongAttempt = 0, rightAttempt = 0;
 char playername[20];
 int playmode;
 char toReplaceWord[25]="";
-char searchWord[25]="bauum";
+char searchWord[25];
 char triedChars[50]="";
 int alreadyGuessedChars=0;
 
@@ -214,6 +214,7 @@ void ExitTriedChars()
 {
     for(int i=0; i<strlen(triedChars); i++)
     {
+        printf("Tried letters: ");
         printf("%c",triedChars[i]);
     }
     printf("\n");
