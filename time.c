@@ -10,10 +10,12 @@ void TimeMeasurement()
     printf("You have needed %.2f sec\n",totalTime);
 
 }
+/*This function will start the timer */
 void StartClock()
 {
     startTime=clock();
 }
+/*This function will end the started timer from the StartClock() function */
 void EndClock()
 {
     endTime=clock();
