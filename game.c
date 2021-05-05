@@ -17,7 +17,11 @@ char searchWord[25];
 char triedChars[50]="";
 int alreadyGuessedChars=0;
 
-
+void EnterPlayerName()
+{
+    printf("Please enter your username: ");
+    scanf("%s",playername);
+}
 /*This function asks the player if he wants to play against the time*/
 void CheckPlayMode()
 {
@@ -39,6 +43,10 @@ void CheckPlayMode()
     }
 }
 
+//void GetSearchWord()
+//{
+//    searchWord=PickRandomWord();
+//}
 void StartGame()
 {
     StartClock();

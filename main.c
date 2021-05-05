@@ -12,17 +12,16 @@
 int main()
 {
 
-    HangmanTitle();
-    GameIntroduction();
-    CheckPlayMode();
-    StartGame();
-    //Clear();
+//    HangmanTitle();
+//    GameIntroduction();
+
+//    CheckPlayMode();
+//    StartGame();
 //    AddToTriedChars('c');
 //    AddToTriedChars('g');
 //    AddToTriedChars('a');
 //    AddToTriedChars('c');
 //    ExitTriedChars();
-
     return 0;
 }
 
