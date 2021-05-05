@@ -30,9 +30,6 @@ void SafeHighscoreList(char searchWord[25], char playername[20], int totalAttemp
         }
         fclose(highscorelist);
         highscorelist = 0;
-        //SOURCE: https://austinrepp.com/how-to-write-to-a-csv-file-in-c/
-        //fprintf("Searchword, Playername, amount of guesses and time\n");
-        //fprintf("%c, %s, %i, %i", searchword, playername, TimeMeasurement);
     }
 
 }
