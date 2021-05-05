@@ -6,6 +6,7 @@
 #include "Textdatei.h"
 #include "visualase.h"
 #include "game.h"
+#include "encryption.h"
 
 int main()
 {
