@@ -105,11 +105,11 @@ void PlayerGuess()
 
     PrintSearchWordHidden(toReplaceWord);
     ExitTriedChars();
-    totalAttempt ++;
+    totalAttempt ++; //the number of attempts will count up every try
     do
     {
         printf("Guess the letters of the searched word: ");
-        scanf(" %c",&userGuess);
+        scanf(" %c",&userGuess); //this line will allow the user to type in his letter
         if (91 < userGuess > 64 )
         {
             userGuess = tolower(userGuess);
