@@ -84,3 +84,18 @@ void EnterPlayerNameIntoTextFile()
         printf("Your Player Name is: %s\n\n", &name);
     }
 }
+/*void PickRandomWord(char searchWord[25])
+{
+    char array[][];
+    int i = 0;
+    srand(time(NULL));
+    int randomIndex = rand() %67;
+    FILE *inputFile = fopen("wordlist.txt", "r");
+    searchWord[25];
+    while(fgets(input, 63, inputFile))
+    {
+        sscanf(searchWord, "%s", array[i]);
+        i++;
+    }
+}
+*/
