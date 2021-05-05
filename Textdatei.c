@@ -4,7 +4,7 @@
 #include <string.h>
 
 char searchWord[25];
-/*This function will safe the searched word, playername, amount of guesses and the current time */
+/*This function will safe the searched word, playername, amount of guesses*/
 void SafeHighscoreList(char playername[25],int totalAttempt,char toReplaceWord[25])
 {
     FILE *highscorelist;
@@ -48,7 +48,7 @@ void EnterPlayerNameIntoTextFile(char playername[25])
 
     }
 }
-
+/*This function will pick a random word from the wordlist.txt file */
 char PickRandomWord()
 {
     char possibleWords[12][25];
