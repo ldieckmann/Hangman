@@ -16,14 +16,16 @@
 	"game.h"
 	"encryption.h"
 
-1620157190 source:c:\git\hangman\main.c
+1620247295 source:c:\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
+	"encryption.h"
 	"Textdatei.h"
 	"visualase.h"
 	"game.h"
+	"encryption.h"
 
 1620056431 D
 	"TextFileManagement.h"
@@ -67,7 +69,7 @@
 	<stdlib.h>
 	<string.h>
 
-1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
+1620247053 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
 	"visualase.h"
 
 1620241946 c:\users\fekef\desktop\git\hangman\visualase.h
@@ -76,7 +78,7 @@
 
 1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
 
-1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
+1620247053 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
 
 1620057270 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.c
 	"visualize.h"
@@ -91,11 +93,11 @@
 
 1620056431 c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.h
 
-1620057954 c:\git\hangman\textdatei.h
+1620242451 c:\git\hangman\textdatei.h
 
-1620154187 c:\git\hangman\visualase.h
+1620242451 c:\git\hangman\visualase.h
 
-1620154187 source:c:\git\hangman\visualase.c
+1620246775 source:c:\git\hangman\visualase.c
 	"visualase.h"
 
 1620247865 source:c:\users\fekef\desktop\git\hangman\game.c
@@ -118,20 +120,23 @@
 1620241946 c:\users\fekef\desktop\git\hangman\time.h
 	<sys/time.h>
 
-1620154187 source:c:\git\hangman\game.c
+1620247287 source:c:\git\hangman\game.c
 	"game.h"
+	"encryption.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
+	<ctype.h>
 	"time.h"
+	"visualase.h"
 
-1620154187 c:\git\hangman\game.h
+1620241403 c:\git\hangman\game.h
 
-1620154187 c:\git\hangman\time.h
+1620242451 c:\git\hangman\time.h
 	<sys/time.h>
 
-1620154187 source:c:\git\hangman\time.c
+1620241403 source:c:\git\hangman\time.c
 	"time.h"
 	<sys/time.h>
 
@@ -145,10 +150,10 @@
 	"time.h"
 	<sys/time.h>
 
-1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\time.h
+1620247053 c:\users\sedadhp\desktop\git_wichmann\hangman\time.h
 	<sys/time.h>
 
-1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
+1620247053 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
 	"game.h"
 	"encryption.h"
 	<stdio.h>
@@ -168,6 +173,11 @@
 
 1620247863 c:\users\fekef\desktop\git\hangman\encryption.h
 
-1620246846 source:c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.c
+1620247073 source:c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.c
 	<stdio.h>
+
+1620247243 source:c:\git\hangman\encryption.c
+	<stdio.h>
+
+1620231866 c:\git\hangman\encryption.h
 

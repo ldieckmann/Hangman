@@ -17,8 +17,10 @@ void SafeHighscoreList(char playername[25],int totalAttempt)
     else
     {
 
+
         fprintf(highscorelist, "Searchword;Playername;Total Attempt");
         fprintf(highscorelist, "%s;%s,%i",searchWord,playername,totalAttempt);
+
 
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
