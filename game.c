@@ -5,15 +5,16 @@
 #include <stdbool.h>
 #include <ctype.h>
 #include "time.h"
+#include "visualase.h"
 
 /*This function asks the player if he wants to play against the time*/
 int totalAttempt = 0, wrongAttempt = 0, rightAttempt = 0;
 char playername[20];
 int playmode;
 char toReplaceWord[25]="";
-char searchWord[25]="baum";
+char searchWord[25]="bauum";
 char triedChars[50]="";
-
+int alreadyGuessedChars=0;
 
 
 /*This function asks the player if he wants to play against the time*/
@@ -39,6 +40,7 @@ void CheckPlayMode()
 
 void StartGame()
 {
+    StartClock();
     ConvertSearchWordToConcealed();
     if (playmode==1)
     {
@@ -53,25 +55,24 @@ void StartGame()
 /*This function will execute the casual playmode*/
 void PlaymodeCasual()
 {
-    if (wrongAttempt < 6)
+    while(WhilePlayCondition()==1)
     {
-        WhileWordIsNotGuessed();
-
+        PlayerGuess();
+    }
+    if(CheckIfGuessed()==0)
+    {
+        Won(playername,totalAttempt,rightAttempt);
     }
     else
     {
-        EndGame(totalAttempt,wrongAttempt);
+        Lose(playername,totalAttempt,rightAttempt);
     }
 }
 
 /*This function will execute the against the time playmode*/
 void PlayModeAgainstTheTime()
 {
-    if (wrongAttempt < 6 & TimeLeft() > 0)
-    {
-
-    }
-    else
+    if(WhilePlayCondition()==1)
     {
         EndGame(totalAttempt,wrongAttempt);
     }
@@ -91,50 +92,57 @@ void PlayerGuess()
     bool exists = false;
     char userGuess;
 
-        PrintSearchWordHidden(toReplaceWord);
-        ExitTries(triedChars);
-        totalAttempt ++;
-        printf("Guess the letters of the searched word: ");
-        scanf(" %c",&userGuess);
-        //if (userGuess)
+    PrintSearchWordHidden(toReplaceWord);
+    ExitTriedChars();
+    totalAttempt ++;
+    printf("Guess the letters of the searched word: ");
+    scanf(" %c",&userGuess);
+    //if (userGuess)
+    {
+        //userGuess = tolower(userGuess);
+    }
+    AddToTriedChars(userGuess);
+    for(int i = 0; i <= strlen(searchWord); i++)
+    {
+        if (searchWord[i] == userGuess)
         {
-                //userGuess = tolower(userGuess);
+            exists = true;
+            ReplaceCharInConsealedWord(i,userGuess);
         }
-        AddToTriedChars(userGuess);
-        for(int i = 0; i <= strlen(searchWord); i++)
+        if(exists == false)
         {
-            if (searchWord[i] == userGuess)
-            {n
-                exists = true;
-                ReplaceCharInConsealedWord(i,userGuess);
-            }
-            if(exists == false)
+            if (searchWord[i] == "-")
             {
-                if (searchWord[i] == "-")
-                {
-                    exists= false;
-                }
+                exists= false;
             }
         }
+    }
 
-        if (exists == true)
-        {
-            printf("Your guess is right.\n");
-            rightAttempt++;
-        }
-        else
-        {
-            printf("Your guess is wrong.\n");
-            wrongAttempt++;
-            HangmanVisualize(wrongAttempt);
-        }
+    if (exists == true)
+    {
+        printf("\n");
+        printf("Your guess is right.\n");
+        rightAttempt++;
+    }
+    else
+    {
+        printf("\n");
+        printf("Your guess is wrong.\n");
+        wrongAttempt++;
+        HangmanVisualize(wrongAttempt);
+    }
 }
 
-void WhileWordIsNotGuessed()
+int WhilePlayCondition()
 {
-    while (CheckIfGuessed() == 1)
+    if ((CheckIfGuessed()==1)&&(wrongAttempt < 7))
     {
-        PlayerGuess();
+        return(1);
+    }
+    else
+    {
+        EndClock();
+        return(0);
     }
 
 }
@@ -148,18 +156,18 @@ int CheckIfGuessed()
             return(1);
         }
     }
-   return(0);
+    return(0);
 }
 
 void ReplaceCharInConsealedWord(int placeInChar,char charToPlace)
 {
     toReplaceWord[placeInChar] = charToPlace;
-    searchWord[i]=95;
+    searchWord[placeInChar]=95;
 }
 void AddToTriedChars(char currentGuess)
 {
     bool alreadyExists = false;
-    for (i = 1; i < strlen(triedChars); i++)
+    for (int i = 0; i < strlen(triedChars); i++)
     {
         if (triedChars[i]==currentGuess)
         {
@@ -168,10 +176,13 @@ void AddToTriedChars(char currentGuess)
     }
     if (!alreadyExists)
     {
-        triedChars[50] = currentGuess;
+        triedChars[alreadyGuessedChars]=currentGuess;
+        alreadyGuessedChars++;
+        SortTriedChars();
     }
 }
-void ExitTriedChars(char triedChar)
+
+void SortTriedChars()
 {
     int i, j;
     char tmp;
@@ -189,5 +200,16 @@ void ExitTriedChars(char triedChar)
         }
     }
 }
+void ExitTriedChars()
+{
+    for(int i=0; i<strlen(triedChars); i++)
+    {
+        printf("%c",triedChars[i]);
+    }
+    printf("\n");
+}
+
+
+
 
 

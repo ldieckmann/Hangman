@@ -95,25 +95,43 @@ void HangmanTitle()
 /*This function prints the searchword, but with hidden letters.*/
 void PrintSearchWordHidden(char searchWord[25])
 {
-    printf("%s",searchWord);
+    printf("searchword: ");
+    printf("%s\n",searchWord);
 }
 
-void ExitAttempt(int totalAttempt,int wrongAttempt)
+void ExitAttempt(int totalAttempt,int rightAttempt)
 {
-    printf("You had %i total and %i wrong attempts\n",totalAttempt,wrongAttempt);
+    printf("total amount of tries: %i and %i right attemts\n",totalAttempt,rightAttempt);
 }
 
-void EndGame(int totalAttempt,int wrongAttempt)
+void EndGame(int totalAttempt,int rightAttempt)
 {
-    ExitAttempt(totalAttempt,wrongAttempt);
-    printf("Gameover");
-
+    ExitAttempt(totalAttempt,rightAttempt);
 }
 
 void ExitTries(char tries[50])
 {
     for(int i=0;i<strlen(tries);i++)
     {
-        printf("%c",tries[i]);
+        printf("Tried letters: ");
+        printf("%c ",tries[i]);
     }
+    printf("\n");
+}
+
+void Won(char playername[20],int totalAttempt,int rightAttempt)
+{
+    printf("%s has won with ",playername);
+    EndGame(totalAttempt,rightAttempt);
+    TimeMeasurement();
+    ExitTriedChars();
+}
+
+void Lose(char playername[20],int totalAttempt,int rightAttempt)
+{
+    printf("Gameover\n");
+    printf("%s has lost with ",playername);
+    EndGame(totalAttempt,rightAttempt);
+    TimeMeasurement();
+    ExitTriedChars();
 }

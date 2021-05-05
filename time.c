@@ -1,25 +1,22 @@
 #include "time.h"
 #include <sys/time.h>
-float totalTime;
-clock_t start, end;
-clock_t currTime;
-clock_t endTime;
-/*Time measurement variables*/
-long i;
+float totalTime, startTime, endTime, currTime;
 
 /*This function measures the game time in seconds*/
 void TimeMeasurement()
 {
-    /*time measurement*/
-    for(i=0; i<200000000; i++);
-
-    /*stop gets the current CPU time*/
-    end = clock();
-
     /*Result of the Runtime measuring in seconds*/
-    totalTime = (float)(end-start) / (float)CLOCKS_PER_SEC;
+    totalTime = (endTime-startTime) / (float)CLOCKS_PER_SEC;
+    printf("You have needed %.2f sec\n",totalTime);
 
-    printf("The Game was running %.2f seconds\n",totalTime);
+}
+void StartClock()
+{
+    startTime=clock();
+}
+void EndClock()
+{
+    endTime=clock();
 }
 
 void GameCountdown()
@@ -48,9 +45,4 @@ void GameCountdown()
         // eine Sekunde ist um
         countdownSec--;
     }
-}
-
-long TimeLeft()
-{
-
 }

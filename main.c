@@ -14,9 +14,20 @@ int main()
     GameIntroduction();
     CheckPlayMode();
     StartGame();
+    //Clear();
+//    AddToTriedChars('c');
+//    AddToTriedChars('g');
+//    AddToTriedChars('a');
+//    AddToTriedChars('c');
+//    ExitTriedChars();
 
     return 0;
 }
+
+
+//versuche
+//erraten
+
 
 
 

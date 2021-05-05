@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+char searchWord[25];
 /*This fucntion imports a word from the wordlist.txt file*/
 void ImportWordsFromWordlistFile()
 {
@@ -19,10 +19,10 @@ void ImportWordsFromWordlistFile()
         char character;
         while((character = fgetc(inputFile)) != EOF)
         {
-            searchword[counter] = tolower(character);
+            searchWord[counter] = tolower(character);
             counter++;
         }
-        printf(searchword);
+        printf(searchWord);
     }
 }
 /*This function will safe the searched word, playername, amount of guesses and the current time */
