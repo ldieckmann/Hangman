@@ -29,7 +29,7 @@
 	"TextFileManagement.h"
 	"visualize.h"
 
-1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620246886 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -166,4 +166,7 @@
 	"encryption.h"
 
 1620241536 c:\users\fekef\desktop\git\hangman\encryption.h
+
+1620246846 source:c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.c
+	<stdio.h>
 

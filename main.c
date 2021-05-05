@@ -11,7 +11,7 @@
 
 int main()
 {
-
+    //Decryption();
     HangmanTitle();
     GameIntroduction();
     CheckPlayMode();
@@ -22,6 +22,8 @@ int main()
 //    AddToTriedChars('a');
 //    AddToTriedChars('c');
 //    ExitTriedChars();
+    Encryption();
+
 
     return 0;
 }
