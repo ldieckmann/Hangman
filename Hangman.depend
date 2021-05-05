@@ -29,11 +29,12 @@
 	"TextFileManagement.h"
 	"visualize.h"
 
-1620240747 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
+	"encryption.h"
 	"Textdatei.h"
 	"visualase.h"
 	"game.h"
@@ -59,22 +60,22 @@
 1620241200 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
-1620158908 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
+1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
 	"Textdatei.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1620165148 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
+1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
 	"visualase.h"
 
 1620239503 c:\users\fekef\desktop\git\hangman\visualase.h
 
 1620239503 c:\users\fekef\desktop\git\hangman\textdatei.h
 
-1620057906 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
+1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
 
-1620158908 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
+1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
 
 1620057270 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualize.c
 	"visualize.h"
@@ -139,14 +140,14 @@
 	<stdlib.h>
 	<string.h>
 
-1620158908 source:c:\users\sedadhp\desktop\git_wichmann\hangman\time.c
+1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\time.c
 	"time.h"
 	<sys/time.h>
 
-1620158908 c:\users\sedadhp\desktop\git_wichmann\hangman\time.h
+1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\time.h
 	<sys/time.h>
 
-1620239057 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
+1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
 	"game.h"
 	"encryption.h"
 	<stdio.h>
@@ -155,8 +156,9 @@
 	<stdbool.h>
 	<ctype.h>
 	"time.h"
+	"visualase.h"
 
-1620158908 c:\users\sedadhp\desktop\git_wichmann\hangman\game.h
+1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\game.h
 
 1620161543 c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.h
 
