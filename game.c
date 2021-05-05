@@ -6,7 +6,6 @@
 #include <stdbool.h>
 #include <ctype.h>
 #include "time.h"
-#include "visualase.h"
 
 /*This function asks the player if he wants to play against the time*/
 int totalAttempt = 0, wrongAttempt = 0, rightAttempt = 0;
@@ -225,13 +224,12 @@ void SortTriedChars()
         }
     }
 }
-/*This function shows the tried letters*/
+/*This function shows all the letters which the user has tried*/
 void ExitTriedChars()
 {
     printf("Tried letters: ");
     for(int i=0; i<strlen(triedChars); i++) //this loop will print all the tried letters
     {
-
         printf("%c",triedChars[i]);
     }
     printf("\n");

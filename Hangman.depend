@@ -31,7 +31,7 @@
 	"TextFileManagement.h"
 	"visualize.h"
 
-1620246886 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -63,8 +63,9 @@
 1620245512 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
-1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
+1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
 	"Textdatei.h"
+	"time.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -76,7 +77,7 @@
 
 1620247426 c:\users\fekef\desktop\git\hangman\textdatei.h
 
-1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
+1620247053 c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.h
 
 1620247053 c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.h
 
@@ -146,7 +147,7 @@
 	<stdlib.h>
 	<string.h>
 
-1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\time.c
+1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\time.c
 	"time.h"
 	<sys/time.h>
 
@@ -164,9 +165,9 @@
 	"time.h"
 	"visualase.h"
 
-1620241575 c:\users\sedadhp\desktop\git_wichmann\hangman\game.h
+1620248151 c:\users\sedadhp\desktop\git_wichmann\hangman\game.h
 
-1620161543 c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.h
+1620248151 c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.h
 
 1620247865 source:c:\users\fekef\desktop\git\hangman\encryption.c
 	<stdio.h>

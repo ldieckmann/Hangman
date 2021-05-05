@@ -106,30 +106,25 @@ void PrintSearchWordHidden(char searchWord[25])
     printf("Searchword: ");
     printf("%s\n",searchWord);
 }
-
+/*This function will be called at the end of the game, whether the player lost or won*/
 void ExitAttempt(int totalAttempt,int rightAttempt)
 {
     printf("total amount of tries: %i and %i right attemts\n",totalAttempt,rightAttempt);
 }
-
-void EndGame(int totalAttempt,int rightAttempt)
-{
-    ExitAttempt(totalAttempt,rightAttempt);
-}
-
+/*This function willl be executed if the player has won the game*/
 void Won(char playername[20],int totalAttempt,int rightAttempt)
 {
     printf("%s has won with ",playername);
-    EndGame(totalAttempt,rightAttempt);
-    TimeMeasurement();
-    ExitTriedChars();
+    ExitAttempt(totalAttempt,rightAttempt); //shows the number of total attempts and right attempts
+    TimeMeasurement(); //the time measurement function is called here
+    ExitTriedChars(); //the exit tried chars function is called here
 }
-
+/*This function will be executed if the player has lost the game*/
 void Lose(char playername[20],int totalAttempt,int rightAttempt)
 {
     printf("Gameover\n");
     printf("%s has lost with ",playername);
-    EndGame(totalAttempt,rightAttempt);
-    TimeMeasurement();
-    ExitTriedChars();
+    ExitAttempt(totalAttempt,rightAttempt); //shows the number of total attempts and right attempts
+    TimeMeasurement(); //the time measurement function is called here
+    ExitTriedChars(); //the exit tried chars function is called here
 }
