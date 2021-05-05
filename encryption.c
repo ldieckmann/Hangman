@@ -14,8 +14,8 @@ int EncryptAndDecrypt()
 /*This function will encrypt the wordlist textfile*/
 int Encrypt(char * wordlist.txt, char * wordlist.txt)
 {
-    FILE *inFile;   //Declare inFile
-    FILE *outFile;  //Declare outFile
+    wordlist.txt *inFile;   //Declare inFile
+    wordlist.txt *outFile;  //Declare outFile
     char Byte;
     char newByte;
     int n;
@@ -45,8 +45,8 @@ int Encrypt(char * wordlist.txt, char * wordlist.txt)
 /*This function will decrypt the wordlist textfile*/
 int Decrypt (char *wordlist.txt, char *wordlist.txt)
 {
-    FILE *inFile; //Declare inFile
-    FILE *outFile; //Declare outFile
+    wordlist.txt *inFile; //Declare inFile
+    wordlist.txt *outFile; //Declare outFile
 
     char Byte;
     char newByte;

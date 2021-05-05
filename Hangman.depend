@@ -27,7 +27,7 @@
 	"TextFileManagement.h"
 	"visualize.h"
 
-1620231704 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620240747 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
