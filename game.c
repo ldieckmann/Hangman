@@ -13,11 +13,15 @@ int totalAttempt = 0, wrongAttempt = 0, rightAttempt = 0;
 char playername[20];
 int playmode;
 char toReplaceWord[25]="";
-char searchWord[25]="bauum";
+char searchWord[25]="";
 char triedChars[50]="";
 int alreadyGuessedChars=0;
 
-
+void EnterPlayerName()
+{
+    printf("Please enter your username: ");
+    scanf("%s",playername);
+}
 /*This function asks the player if he wants to play against the time*/
 void CheckPlayMode()
 {
@@ -26,7 +30,6 @@ void CheckPlayMode()
     scanf("%c", &yesOrNo);
     while((yesOrNo != 'y') && (yesOrNo != 'n')) //Repeats an Error message until the player selects the valid playmode
     {
-        printf("Do you want to play against the time? (y/n): ");
         scanf("%c", &yesOrNo);
     }
     if (yesOrNo == 'n')
@@ -39,14 +42,18 @@ void CheckPlayMode()
     }
 }
 
+void GetSearchWord()
+{
+    searchWord[25] =  PickRandomWord();
+}
 void StartGame()
 {
     StartClock();
     ConvertSearchWordToConcealed();
-    if (playmode==1)
-    {
-        PlayModeAgainstTheTime();
-    }
+//    if (playmode==1)
+//    {
+//        PlayModeAgainstTheTime();
+//    }
     if (playmode ==0)
     {
         PlaymodeCasual();
@@ -71,13 +78,13 @@ void PlaymodeCasual()
 }
 
 /*This function will execute the against the time playmode*/
-void PlayModeAgainstTheTime()
-{
-    if(WhilePlayCondition()==1)
-    {
-        EndGame(totalAttempt,wrongAttempt);
-    }
-}
+//void PlayModeAgainstTheTime()
+//{
+//    if(WhilePlayCondition()==1)
+//    {
+//        EndGame(totalAttempt,wrongAttempt);
+//    }
+//}
 
 void ConvertSearchWordToConcealed()
 {
@@ -96,12 +103,16 @@ void PlayerGuess()
     PrintSearchWordHidden(toReplaceWord);
     ExitTriedChars();
     totalAttempt ++;
-    printf("Guess the letters of the searched word: ");
-    scanf(" %c",&userGuess);
-    //if (userGuess)
+    do
     {
-        //userGuess = tolower(userGuess);
+        printf("Guess the letters of the searched word: ");
+        scanf(" %c",&userGuess);
+        if (91 < userGuess > 64 )
+        {
+            userGuess = tolower(userGuess);
+        }
     }
+    while(96 < userGuess > 123);
     AddToTriedChars(userGuess);
     for(int i = 0; i <= strlen(searchWord); i++)
     {
@@ -115,11 +126,11 @@ void PlayerGuess()
 
             if (searchWord[i] == "-")
 
-            if (searchWord[i] == userGuess)
-            {
-                exists = true;
-                ReplaceCharInConsealedWord(i,userGuess);
-            }
+                if (searchWord[i] == userGuess)
+                {
+                    exists = true;
+                    ReplaceCharInConsealedWord(i,userGuess);
+                }
             if(exists == false)
 
             {
@@ -131,13 +142,13 @@ void PlayerGuess()
     if (exists == true)
     {
         printf("\n");
-        printf("Your guess is right.\n");
+        printf("Your guess is right\n");
         rightAttempt++;
     }
     else
     {
         printf("\n");
-        printf("Your guess is wrong.\n");
+        printf("Your guess is wrong\n");
         wrongAttempt++;
         HangmanVisualize(wrongAttempt);
     }
@@ -212,8 +223,10 @@ void SortTriedChars()
 }
 void ExitTriedChars()
 {
+    printf("Tried letters: ");
     for(int i=0; i<strlen(triedChars); i++)
     {
+
         printf("%c",triedChars[i]);
     }
     printf("\n");

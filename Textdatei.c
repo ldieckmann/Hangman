@@ -2,58 +2,46 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 char searchWord[25];
-/*This fucntion imports a word from the wordlist.txt file*/
-void ImportWordsFromWordlistFile()
-{
 
-    int counter = 0;
-    FILE *inputFile;
-    inputFile = fopen("wordlist.txt", "r");
-    if(inputFile == NULL)
-    {
-        printf("Error: This document cannot be opened!");
-    }
-    else
-    {
-        char character;
-        while((character = fgetc(inputFile)) != EOF)
-        {
-            searchWord[counter] = tolower(character);
-            counter++;
-        }
-        printf(searchWord);
-    }
-}
+
 /*This function will safe the searched word, playername, amount of guesses and the current time */
-void SafeHighscoreList()
+void SafeHighscoreList(char searchWord[25])
 {
-
     FILE *highscorelist;
     int i;
     int array[4];
     highscorelist = fopen("highscorelist.csv", "w+");
-     if(highscorelist == NULL)
+    if(highscorelist == NULL)
     {
         printf("Error: This document cannot be opened!");
     }
     else
     {
-        fprintf(highscorelist, "Searchword;Playername;Amount of guesses;Time");
+<<<<<<< HEAD
+        fprintf(highscorelist, "Searchword");
+       // for(i = 0; i < strlen(array); i++)
+       // {
+         //   fprintf(highscorelist,"%d", array[i]);
+        fprintf(highscorelist, "%s;%s,%i",searchWord);
+=======
+        fprintf(highscorelist, "Searchword;Playername;Total Attempt;Time");
         for(i = 0; i < strlen(array); i++)
+
+        { //fprintf("%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+
         {
+            fprintf(highscorelist,"%d", array[i]);
+            fprintf(highscorelist, "%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+
+>>>>>>> 3763be8c3555e63c34e17665cdecbad22c3610de
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
             */
-            fprintf(highscorelist,"%d", array[i]);
-        }
+       // }
         fclose(highscorelist);
         highscorelist = 0;
-
-
-        //SOURCE: https://austinrepp.com/how-to-write-to-a-csv-file-in-c/
-        //fprintf("Searchword, Playername, amount of guesses and time\n");
-        //fprintf("%c, %s, %i, %i", searchword, playername, TimeMeasurement);
     }
 
 }
@@ -84,3 +72,35 @@ void EnterPlayerNameIntoTextFile()
         printf("Your Player Name is: %s\n\n", &name);
     }
 }
+
+char PickRandomWord()
+{
+    char possibleWords[12][25];
+    int i = 0;
+    char importWord[25];
+    srand(time(NULL));
+    int randomWord ;
+//    randomw = rand() %3;
+randomWord = 1;
+    FILE *inputFile = fopen("wordlist.txt", "r");
+
+    while(fgets(importWord, 25, inputFile))
+    {
+        for(int j =0;j<strlen(importWord);j++)
+        {
+            if(91 < importWord[j]> 64)
+            {
+                importWord[j]=tolower(importWord[j]);
+            }
+        }
+        sscanf(importWord, "%s", possibleWords[i]);
+        i++;
+    }
+
+    for(int j =0; j<strlen(possibleWords[randomWord-1]); j++)
+    {
+        searchWord[j] =  possibleWords[randomWord-1][j];
+    }
+    return(searchWord);
+}
+
