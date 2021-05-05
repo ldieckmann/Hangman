@@ -25,13 +25,7 @@
 	"TextFileManagement.h"
 	"visualize.h"
 
-1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<stdbool.h>
-	"encryption.h"
-	"Textdatei.h"
+1620250238 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	"visualase.h"
 	"game.h"
 	"encryption.h"
@@ -56,9 +50,8 @@
 1620248598 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
-1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
+1620250238 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
 	"Textdatei.h"
-	"time.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -140,14 +133,14 @@
 	<stdlib.h>
 	<string.h>
 
-1620248151 source:c:\users\sedadhp\desktop\git_wichmann\hangman\time.c
+1620250238 source:c:\users\sedadhp\desktop\git_wichmann\hangman\time.c
 	"time.h"
 	<sys/time.h>
 
 1620247053 c:\users\sedadhp\desktop\git_wichmann\hangman\time.h
 	<sys/time.h>
 
-1620247053 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
+1620250239 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
 	"game.h"
 	"encryption.h"
 	<stdio.h>
@@ -156,7 +149,6 @@
 	<stdbool.h>
 	<ctype.h>
 	"time.h"
-	"visualase.h"
 
 1620248151 c:\users\sedadhp\desktop\git_wichmann\hangman\game.h
 
@@ -167,7 +159,7 @@
 
 1620247863 c:\users\fekef\desktop\git\hangman\encryption.h
 
-1620247073 source:c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.c
+1620250238 source:c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.c
 	<stdio.h>
 
 1620247243 source:c:\git\hangman\encryption.c
