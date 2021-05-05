@@ -12,9 +12,9 @@
 int main()
 {
 
+SafeHighscoreList(PickRandomWord());
 //    HangmanTitle();
 //    GameIntroduction();
-
 //    CheckPlayMode();
 //    StartGame();
 //    AddToTriedChars('c');

@@ -16,7 +16,7 @@
 	"game.h"
 	"encryption.h"
 
-1620244509 source:c:\git\hangman\main.c
+1620246517 source:c:\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -139,7 +139,7 @@
 	"time.h"
 	<sys/time.h>
 
-1620157148 source:c:\git\hangman\textdatei.c
+1620246506 source:c:\git\hangman\textdatei.c
 	"Textdatei.h"
 	<stdio.h>
 	<stdlib.h>
