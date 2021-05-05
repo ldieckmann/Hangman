@@ -27,7 +27,7 @@
 	"TextFileManagement.h"
 	"visualize.h"
 
-1620160650 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
+1620240747 source:c:\users\sedadhp\desktop\git_wichmann\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -35,6 +35,7 @@
 	"Textdatei.h"
 	"visualase.h"
 	"game.h"
+	"encryption.h"
 
 1620056431 ent of d5dc7f7 (Renamed Files)
 	<stdio.h>
@@ -62,7 +63,7 @@
 	<stdlib.h>
 	<string.h>
 
-1620163317 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
+1620165148 source:c:\users\sedadhp\desktop\git_wichmann\hangman\visualase.c
 	"visualase.h"
 
 1620239503 c:\users\fekef\desktop\git\hangman\visualase.h
@@ -142,8 +143,9 @@
 1620158908 c:\users\sedadhp\desktop\git_wichmann\hangman\time.h
 	<sys/time.h>
 
-1620160650 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
+1620239057 source:c:\users\sedadhp\desktop\git_wichmann\hangman\game.c
 	"game.h"
+	"encryption.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -152,4 +154,6 @@
 	"time.h"
 
 1620158908 c:\users\sedadhp\desktop\git_wichmann\hangman\game.h
+
+1620161543 c:\users\sedadhp\desktop\git_wichmann\hangman\encryption.h
 

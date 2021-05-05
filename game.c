@@ -1,4 +1,5 @@
 #include "game.h"
+#include "encryption.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -111,7 +112,16 @@ void PlayerGuess()
         }
         if(exists == false)
         {
+
             if (searchWord[i] == "-")
+
+            if (searchWord[i] == userGuess)
+            {
+                exists = true;
+                ReplaceCharInConsealedWord(i,userGuess);
+            }
+            if(exists == false)
+
             {
                 exists= false;
             }
