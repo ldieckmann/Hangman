@@ -105,7 +105,7 @@ void PlayerGuess()
         for(int i = 0; i <= strlen(searchWord); i++)
         {
             if (searchWord[i] == userGuess)
-            {n
+            {
                 exists = true;
                 ReplaceCharInConsealedWord(i,userGuess);
             }
