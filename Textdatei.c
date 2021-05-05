@@ -5,7 +5,7 @@
 
 char searchWord[25];
 /*This function will safe the searched word, playername, amount of guesses and the current time */
-void SafeHighscoreList(char playername[25],int totalAttempt,float totalTime)
+void SafeHighscoreList(char playername[25],int totalAttempt)
 {
     FILE *highscorelist;
     highscorelist = fopen("highscorelist.csv", "w+");
@@ -17,7 +17,7 @@ void SafeHighscoreList(char playername[25],int totalAttempt,float totalTime)
     {
 
         fprintf(highscorelist, "Searchword;Playername;Total Attempt;Time");
-        fprintf(highscorelist, "%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+        fprintf(highscorelist, "%s;%s,%i,%f",searchWord,playername,totalAttempt);
 
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.

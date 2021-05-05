@@ -17,6 +17,7 @@ char searchWord[25]="";
 char triedChars[50]="";
 int alreadyGuessedChars=0;
 
+/*This function let the player enter his name*/
 void EnterPlayerName()
 {
     printf("Please enter your username: ");
@@ -41,11 +42,13 @@ void CheckPlayMode()
         playmode = 1; //playmode 1 = against the time
     }
 }
-
+/*This function gets the searched word*/
 void GetSearchWord()
 {
     searchWord[25] =  PickRandomWord();
 }
+
+/* This function starts the game*/
 void StartGame()
 {
     StartClock();
@@ -85,7 +88,7 @@ void PlaymodeCasual()
 //        EndGame(totalAttempt,wrongAttempt);
 //    }
 //}
-
+/*This function will convert the searchword to concealed */
 void ConvertSearchWordToConcealed()
 {
     for(int i=0; i<strlen(searchWord); i++)
