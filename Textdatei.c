@@ -7,7 +7,7 @@ char searchWord[25];
 
 
 /*This function will safe the searched word, playername, amount of guesses and the current time */
-void SafeHighscoreList()
+void SafeHighscoreList(char searchWord[25], char playername[20], int totalAttempt, float totalTime)
 {
     FILE *highscorelist;
     int i;
@@ -19,18 +19,17 @@ void SafeHighscoreList()
     }
     else
     {
-        fprintf(highscorelist, "Searchword;Playername;Amount of guesses;Time");
+        fprintf(highscorelist, "Searchword;Playername;Total Attempt;Time");
         for(i = 0; i < strlen(array); i++)
-        { fprintf("%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+        {
+            fprintf(highscorelist,"%d", array[i]);
+            fprintf(highscorelist, "%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
             */
-            fprintf(highscorelist,"%d", array[i]);
         }
         fclose(highscorelist);
         highscorelist = 0;
-
-
         //SOURCE: https://austinrepp.com/how-to-write-to-a-csv-file-in-c/
         //fprintf("Searchword, Playername, amount of guesses and time\n");
         //fprintf("%c, %s, %i, %i", searchword, playername, TimeMeasurement);
