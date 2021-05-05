@@ -32,7 +32,7 @@ int EncryptAndDecrypt()
     return 0;
 }
 /*This function will encrypt the wordlist textfile*/
-int Encrypt(char * FILENAME, char * NEW_FILENAME)
+int Encrypt(char * wordlist.txt, char * wordlist.txt)
 {
     FILE *inFile;   //Declare inFile
     FILE *outFile;  //Declare outFile
@@ -41,8 +41,8 @@ int Encrypt(char * FILENAME, char * NEW_FILENAME)
     int n;
     int i=0;
 
-    inFile = fopen(FILENAME,"rb");
-    outFile = fopen(NEW_FILENAME, "w");
+    inFile = fopen(wordlist.txt,"rb");
+    outFile = fopen(wordlist.txt, "w");
 
     if(inFile == NULL || outfile == NULL){
         printf("Error in opening file");
