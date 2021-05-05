@@ -1,35 +1,15 @@
 #include <stdio.h>
-/*This function exists to encrypt or decrypt thhe wordlist textfiles at choice*/
+/*This function exists to encrypt or decrypt the wordlist textfiles*/
 int EncryptAndDecrypt()
 {
-    char encFile[200];
-    char newencFile[200];
-    char decFile[200];
-    char newdecFile[200];
+    char encFile[20] = "wordlist.txt";
+    char newencFile[20] = "wordlist.txt";
+    char decFile[20] = "wordlist.txt";
+    char newdecFile[20] = "wordlist.txt";
 
-    int choice;
+    Encrypt(encFile, newencFile); //Call of the function which encrypts the wordlist file
+    Decrypt(decFile, newdecFile); //Call of the function which decrypts the wordlist file
 
-    printf("Enter 1 to Encrypt  / 2 to Decrypt");
-    scanf("%d",&choice);
-
-    switch(choice)
-    {
-    case 1:
-        printf("Enter the Source Filename:  ");
-        scanf("%s",encFile);
-        printf("Enter the Destination Filename:   ");
-        scanf("%s",newencFile);
-        Encrypt(encFile, newencFile);
-        break;
-    case 2:
-        printf("Enter the Source Filename:   ");
-        scanf("%s",decFile);
-        printf("Enter the Destination Filename:   ");
-        scanf("%s",newdecFile);
-        Decrypt(decFile, newdecFile);
-        break;
-    }
-    return 0;
 }
 /*This function will encrypt the wordlist textfile*/
 int Encrypt(char * wordlist.txt, char * wordlist.txt)
