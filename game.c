@@ -224,6 +224,7 @@ void SortTriedChars()
         }
     }
 }
+/*This function shows the tried chars*/
 void ExitTriedChars()
 {
     printf("Tried letters: ");
