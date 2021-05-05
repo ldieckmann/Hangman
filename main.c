@@ -3,7 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 #include "encryption.h"
-
 #include "Textdatei.h"
 #include "visualase.h"
 #include "game.h"
@@ -12,16 +11,13 @@
 int main()
 {
 
-//    HangmanTitle();
-//    GameIntroduction();
+    HangmanTitle();
+    GameIntroduction();
+    EnterPlayerName();
+    CheckPlayMode();
+    GetSearchWord();
+    StartGame();
 
-//    CheckPlayMode();
-//    StartGame();
-//    AddToTriedChars('c');
-//    AddToTriedChars('g');
-//    AddToTriedChars('a');
-//    AddToTriedChars('c');
-//    ExitTriedChars();
     return 0;
 }
 

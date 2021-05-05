@@ -103,7 +103,7 @@ void HangmanTitle()
 /*This function prints the searchword, but with hidden letters.*/
 void PrintSearchWordHidden(char searchWord[25])
 {
-    printf("searchword: ");
+    printf("Searchword: ");
     printf("%s\n",searchWord);
 }
 

@@ -5,7 +5,7 @@
 	<string.h>
 	<stdbool.h>
 
-1620243410 source:c:\users\fekef\desktop\git\hangman\main.c
+1620245100 source:c:\users\fekef\desktop\git\hangman\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -51,13 +51,13 @@
 	"Textdatei.h"
 	"visualase.h"
 
-1620244107 source:c:\users\fekef\desktop\git\hangman\textdatei.c
+1620246536 source:c:\users\fekef\desktop\git\hangman\textdatei.c
 	"Textdatei.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1620241756 source:c:\users\fekef\desktop\git\hangman\visualase.c
+1620245512 source:c:\users\fekef\desktop\git\hangman\visualase.c
 	"visualase.h"
 
 1620241575 source:c:\users\sedadhp\desktop\git_wichmann\hangman\textdatei.c
@@ -97,7 +97,7 @@
 1620154187 source:c:\git\hangman\visualase.c
 	"visualase.h"
 
-1620243417 source:c:\users\fekef\desktop\git\hangman\game.c
+1620246626 source:c:\users\fekef\desktop\git\hangman\game.c
 	"game.h"
 	"encryption.h"
 	<stdio.h>

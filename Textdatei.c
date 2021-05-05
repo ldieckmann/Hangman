@@ -21,7 +21,7 @@ void SafeHighscoreList()
     {
         fprintf(highscorelist, "Searchword;Playername;Amount of guesses;Time");
         for(i = 0; i < strlen(array); i++)
-        { fprintf("%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+        { //fprintf("%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
             */
@@ -78,6 +78,13 @@ randomWord = 1;
 
     while(fgets(importWord, 25, inputFile))
     {
+        for(int j =0;j<strlen(importWord);j++)
+        {
+            if(91 < importWord[j]> 64)
+            {
+                importWord[j]=tolower(importWord[j]);
+            }
+        }
         sscanf(importWord, "%s", possibleWords[i]);
         i++;
     }
