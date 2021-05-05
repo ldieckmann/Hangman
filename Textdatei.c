@@ -19,11 +19,23 @@ void SafeHighscoreList(char searchWord[25])
     }
     else
     {
+<<<<<<< HEAD
         fprintf(highscorelist, "Searchword");
        // for(i = 0; i < strlen(array); i++)
        // {
          //   fprintf(highscorelist,"%d", array[i]);
         fprintf(highscorelist, "%s;%s,%i",searchWord);
+=======
+        fprintf(highscorelist, "Searchword;Playername;Total Attempt;Time");
+        for(i = 0; i < strlen(array); i++)
+
+        { //fprintf("%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+
+        {
+            fprintf(highscorelist,"%d", array[i]);
+            fprintf(highscorelist, "%s;%s,%i,%f",searchWord,playername,totalAttempt,totalTime);
+
+>>>>>>> 3763be8c3555e63c34e17665cdecbad22c3610de
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
             */
@@ -74,6 +86,13 @@ randomWord = 1;
 
     while(fgets(importWord, 25, inputFile))
     {
+        for(int j =0;j<strlen(importWord);j++)
+        {
+            if(91 < importWord[j]> 64)
+            {
+                importWord[j]=tolower(importWord[j]);
+            }
+        }
         sscanf(importWord, "%s", possibleWords[i]);
         i++;
     }

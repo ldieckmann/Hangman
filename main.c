@@ -3,7 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 #include "encryption.h"
-
 #include "Textdatei.h"
 #include "visualase.h"
 #include "game.h"
@@ -12,6 +11,7 @@
 int main()
 {
 
+<<<<<<< HEAD
 SafeHighscoreList(PickRandomWord());
 //    HangmanTitle();
 //    GameIntroduction();
@@ -22,6 +22,15 @@ SafeHighscoreList(PickRandomWord());
 //    AddToTriedChars('a');
 //    AddToTriedChars('c');
 //    ExitTriedChars();
+=======
+    HangmanTitle();
+    GameIntroduction();
+    EnterPlayerName();
+    CheckPlayMode();
+    GetSearchWord();
+    StartGame();
+
+>>>>>>> 3763be8c3555e63c34e17665cdecbad22c3610de
     return 0;
 }
 
