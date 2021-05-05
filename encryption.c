@@ -18,8 +18,8 @@ int Encryption()
         fputc (~ch, ft);
     fclose (fs);
     fclose (ft);
-    remove (sourceFile);
-    rename (targetFile, sourceFile);
+    remove (sourceFile); //removes the old wordlist.txt
+    rename (targetFile, sourceFile); //renames the new encrypted file to wordlist.txt
     return 0; //returns 0 if the file was encrypted successfully
 }
 /*This function does encrypt the wordlist textfile*/
