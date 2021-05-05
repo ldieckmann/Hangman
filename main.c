@@ -12,12 +12,14 @@ int main()
 {
 
     SafeHighscoreList(PickRandomWord());
+    Encryption();
     HangmanTitle();
     GameIntroduction();
     EnterPlayerName();
     CheckPlayMode();
     GetSearchWord();
     StartGame();
+
     return 0;
 }
 
