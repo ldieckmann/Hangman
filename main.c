@@ -11,26 +11,13 @@
 int main()
 {
 
-<<<<<<< HEAD
-SafeHighscoreList(PickRandomWord());
-//    HangmanTitle();
-//    GameIntroduction();
-//    CheckPlayMode();
-//    StartGame();
-//    AddToTriedChars('c');
-//    AddToTriedChars('g');
-//    AddToTriedChars('a');
-//    AddToTriedChars('c');
-//    ExitTriedChars();
-=======
+    SafeHighscoreList(PickRandomWord());
     HangmanTitle();
     GameIntroduction();
     EnterPlayerName();
     CheckPlayMode();
     GetSearchWord();
     StartGame();
-
->>>>>>> 3763be8c3555e63c34e17665cdecbad22c3610de
     return 0;
 }
 
