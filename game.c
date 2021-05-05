@@ -106,11 +106,11 @@ void PlayerGuess()
 
     PrintSearchWordHidden(toReplaceWord);
     ExitTriedChars();
-    totalAttempt ++;
+    totalAttempt ++; //the number of attempts will count up every try
     do
     {
         printf("Guess the letters of the searched word: ");
-        scanf(" %c",&userGuess);
+        scanf(" %c",&userGuess); //this line will allow the user to type in his letter
         if (91 < userGuess > 64 )
         {
             userGuess = tolower(userGuess);
@@ -147,49 +147,49 @@ void PlayerGuess()
     {
         printf("\n");
         printf("Your guess is right\n");
-        rightAttempt++;
+        rightAttempt++; //counts the number of right attempts up every time the user guess is rigt
     }
     else
     {
         printf("\n");
         printf("Your guess is wrong\n");
-        wrongAttempt++;
-        HangmanVisualize(wrongAttempt);
+        wrongAttempt++; //counts the number of wrong attempts up every time the user guess is wrong
+        HangmanVisualize(wrongAttempt); //Calls the function which prints the hangman itself and gives the wrong attempts as parameter.
     }
 }
-
+/*This function will check if the playing condition is adhered to */
 int WhilePlayCondition()
 {
     if ((CheckIfGuessed()==1)&&(wrongAttempt < 7))
     {
-        return(1);
+        return(1); //returns 1 while the game isn't over
     }
     else
     {
-        EndClock();
-        return(0);
+        EndClock(); //time measurement will stop here
+        return(0); //returns 0 is the game is over
     }
 
 }
-
+/*This function will check if the guessed letter is right */
 int CheckIfGuessed()
 {
     for(int i=0; i<strlen(toReplaceWord); i++)
     {
         if (toReplaceWord[i]== 95)
         {
-            return(1);
+            return(1); //returns 1 if the right letter wasn't found
         }
     }
-    return(0);
+    return(0); //returns 0 if the right letter was found
 }
-
+/*This function will replace the char into the consealed*/
 void ReplaceCharInConsealedWord(int placeInChar,char charToPlace)
 {
     toReplaceWord[placeInChar] = charToPlace;
     searchWord[placeInChar]=95;
 }
-
+/*This function will add the current guesses to tried chars */
 void AddToTriedChars(char currentGuess)
 {
     bool alreadyExists = false;
@@ -207,7 +207,7 @@ void AddToTriedChars(char currentGuess)
         SortTriedChars();
     }
 }
-
+/*This function will sort the tried chars ascending*/
 void SortTriedChars()
 {
     int i, j;
@@ -226,11 +226,11 @@ void SortTriedChars()
         }
     }
 }
-/*This function shows the tried chars*/
+/*This function shows the tried letters*/
 void ExitTriedChars()
 {
     printf("Tried letters: ");
-    for(int i=0; i<strlen(triedChars); i++)
+    for(int i=0; i<strlen(triedChars); i++) //this loop will print all the tried letters
     {
 
         printf("%c",triedChars[i]);
