@@ -24,9 +24,6 @@ int Encryption()
 /*This function does encrypt the wordlist textfile*/
 /*This function is NOT FINISHED !!*/
 
-int Decryption()
-{
-
 /*
 int Decryption() {
 
@@ -50,7 +47,5 @@ int Decryption() {
     rename (targetFile, sourceFile);
     return 0;
 }
-
-
 */
 

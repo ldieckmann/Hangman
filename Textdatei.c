@@ -1,12 +1,11 @@
 #include "Textdatei.h"
-#include "time.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 char searchWord[25];
 /*This function will safe the searched word, playername, amount of guesses and the current time */
-void SafeHighscoreList(char playername[25],int totalAttempt)
+void SafeHighscoreList(char playername[25],int totalAttempt,char toReplaceWord[25])
 {
     FILE *highscorelist;
     highscorelist = fopen("highscorelist.csv", "w+");
@@ -16,12 +15,8 @@ void SafeHighscoreList(char playername[25],int totalAttempt)
     }
     else
     {
-
-
         fprintf(highscorelist, "Searchword;Playername;Total Attempt");
-        fprintf(highscorelist, "%s;%s,%i",searchWord,playername,totalAttempt);
-
-
+        fprintf(highscorelist, "\n%s;%s;%i",toReplaceWord,playername,totalAttempt);
             /*The function fprintf() allows to write content to any file
             * which is a type of text, where you may write content to a *.csv file, too.
             */
@@ -29,11 +24,10 @@ void SafeHighscoreList(char playername[25],int totalAttempt)
     }
 
 }
-/*This function saves the player name into the playername.txt textfile*/
-void EnterPlayerNameIntoTextFile()
+/*This function saves the playername name into the playername.txt textfile*/
+void EnterPlayerNameIntoTextFile(char playername[25])
 {
     FILE *playernames;
-    char name[20];
     int i;
 
     playernames = fopen("playername.txt", "a");
@@ -43,17 +37,15 @@ void EnterPlayerNameIntoTextFile()
     }
     else
     {
-        printf("Enter your Player Name: ");
-        scanf("%s", &name);
-        for(i = 0; i <strlen(name); i++)
+        for(i = 0; i <strlen(playername); i++)
         {
-            fputc(name[i], playernames);
+            fputc(playername[i], playernames);
         }
         //add new line
         fputc(10, playernames);
         fclose(playernames);
 
-        printf("Your Player Name is: %s\n\n", &name);
+
     }
 }
 
@@ -64,8 +56,7 @@ char PickRandomWord()
     char importWord[25];
     srand(time(NULL));
     int randomWord ;
-//    randomw = rand() %3;
-randomWord = 1;
+    randomWord = rand() %10;
     FILE *inputFile = fopen("wordlist.txt", "r");
 
     while(fgets(importWord, 25, inputFile))

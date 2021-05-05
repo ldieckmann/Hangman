@@ -123,6 +123,7 @@ void Won(char playername[20],int totalAttempt,int rightAttempt)
     EndGame(totalAttempt,rightAttempt);
     TimeMeasurement();
     ExitTriedChars();
+    SafeHighscoreList(playername,totalAttempt);
 }
 
 void Lose(char playername[20],int totalAttempt,int rightAttempt)
