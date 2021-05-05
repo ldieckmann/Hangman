@@ -156,7 +156,7 @@ void PlayerGuess()
         HangmanVisualize(wrongAttempt);
     }
 }
-
+/*This function will check if the playing condition is adhered to */
 int WhilePlayCondition()
 {
     if ((CheckIfGuessed()==1)&&(wrongAttempt < 7))
@@ -170,7 +170,7 @@ int WhilePlayCondition()
     }
 
 }
-
+/*This function will check if the guessed letter is right */
 int CheckIfGuessed()
 {
     for(int i=0; i<strlen(toReplaceWord); i++)
@@ -182,13 +182,13 @@ int CheckIfGuessed()
     }
     return(0);
 }
-
+/*This function will replace the char into the consealed*/
 void ReplaceCharInConsealedWord(int placeInChar,char charToPlace)
 {
     toReplaceWord[placeInChar] = charToPlace;
     searchWord[placeInChar]=95;
 }
-
+/*This function will add the current guesses to tried chars */
 void AddToTriedChars(char currentGuess)
 {
     bool alreadyExists = false;
@@ -206,7 +206,7 @@ void AddToTriedChars(char currentGuess)
         SortTriedChars();
     }
 }
-
+/*This function will sort the tried chars ascending*/
 void SortTriedChars()
 {
     int i, j;
